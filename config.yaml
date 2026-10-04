@@ -1,0 +1,13 @@
+project:
+  name: mineops
+  seed: 42
+
+data:
+  aoi_path: "data/zawar/aoi.geojson"
+  years: [2021, 2022, 2023, 2024, 2025, 2026]
+  season_window: ["02-01", "04-30"]
+  resolution: 10
+  crs_area: "EPSG:32643"
+  cloud_pct_max: 20
+  patch_size: 256
+  bands: ["B2", "B3", "B4", "B5", "B6", "B7", "B8", "B8A", "B11", "B12"]
