@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+data/*
+!data/zawar/
+data/zawar/*
+!data/zawar/aoi.geojson
+
+outputs/models/
+*.tif
+*.pth

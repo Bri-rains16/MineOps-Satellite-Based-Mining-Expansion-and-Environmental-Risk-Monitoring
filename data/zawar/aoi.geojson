@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "zawar_block1_rect" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [73.6736, 24.2972],
+          [73.7597, 24.2972],
+          [73.7597, 24.3778],
+          [73.6736, 24.3778],
+          [73.6736, 24.2972]
+        ]]
+      }
+    }
+  ]
+}
