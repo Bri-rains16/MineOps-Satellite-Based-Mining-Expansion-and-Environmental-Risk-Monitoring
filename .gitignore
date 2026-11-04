@@ -1,13 +1,13 @@
+# Virtual Environment
 .venv/
 __pycache__/
-.ipynb_checkpoints/
+
+# Datasets and Heavy Weights
+data/
+outputs/models/*.pth
+outputs/maps/*.tif
+*.npy
+*.parquet
+
+# OS Files
 .DS_Store
-
-data/*
-!data/zawar/
-data/zawar/*
-!data/zawar/aoi.geojson
-
-outputs/models/
-*.tif
-*.pth
