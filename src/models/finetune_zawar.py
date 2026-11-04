@@ -26,7 +26,7 @@ if __name__ == "__main__":
     print(f"4. Starting Zawar fine-tuning on {device.upper()}...")
     model.train()
     
-    for epoch in range(1, 4):  # 3 epochs for this initial test
+    for epoch in range(1, 31):  # 3 epochs for this initial test [it was 1-4 first, now changed to 1-31]
         epoch_loss = 0
         for i, (images, masks) in enumerate(loader):
             images, masks = images.to(device), masks.to(device)
