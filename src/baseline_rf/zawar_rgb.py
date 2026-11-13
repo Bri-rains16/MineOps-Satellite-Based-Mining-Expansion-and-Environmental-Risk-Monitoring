@@ -16,8 +16,11 @@ import time
 from datetime import datetime, timezone
 import ee
 import requests
+from dotenv import load_dotenv
 
-ee.Initialize(project="mineguard-ai-507807")
+load_dotenv()
+GEE_PROJECT = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
+ee.Initialize(project=GEE_PROJECT)
 
 aoi = ee.Geometry.Rectangle([73.6736, 24.2972, 73.7597, 24.3778])
 

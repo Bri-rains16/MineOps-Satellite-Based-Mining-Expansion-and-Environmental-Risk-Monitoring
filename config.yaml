@@ -11,3 +11,14 @@ data:
   cloud_pct_max: 20
   patch_size: 256
   bands: ["B2", "B3", "B4", "B5", "B6", "B7", "B8", "B8A", "B11", "B12"]
+
+proximity:
+  ee_project: null
+  dynamic_world_dir: "data/zawar/dynamic_world"
+  unet_maps_dir: "outputs/maps"
+  output_dir: "outputs/proximity"
+  min_component_area_m2: 1000
+  noise_filter_kernel_size: 3
+  dw_min_confidence: 0.35
+  buffer_distances: [100, 250, 500, 1000]
+

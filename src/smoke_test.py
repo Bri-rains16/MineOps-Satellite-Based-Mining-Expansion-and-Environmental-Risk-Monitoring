@@ -1,6 +1,10 @@
 import yaml
+import os
 import ee
+from dotenv import load_dotenv
 import torch
+
+load_dotenv()
 import segmentation_models_pytorch as smp
 
 # 1. Load Configuration
@@ -26,11 +30,12 @@ output = model(dummy_input)
 print(f"U-Net forward pass successful! Output shape: {output.shape}")
 
 # 4. Earth Engine Authentication
+GEE_PROJECT = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
 try:
-    ee.Initialize(project='mineops-major-porject')
-    print("Earth Engine initialized successfully!")
+    ee.Initialize(project=GEE_PROJECT)
+    print(f"Earth Engine initialized successfully with project {GEE_PROJECT}!")
 except Exception as e:
     print("Earth Engine needs authentication. A browser window will open...")
     ee.Authenticate()
-    ee.Initialize(project='mineops-major-porject')
-    print("Earth Engine authenticated and initialized!")
+    ee.Initialize(project=GEE_PROJECT)
+    print(f"Earth Engine authenticated and initialized with project {GEE_PROJECT}!")

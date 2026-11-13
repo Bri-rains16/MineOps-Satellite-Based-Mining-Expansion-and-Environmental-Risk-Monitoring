@@ -20,6 +20,9 @@ import sys
 import json
 import requests
 import ee
+from dotenv import load_dotenv
+
+load_dotenv()
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -28,8 +31,9 @@ if hasattr(sys.stdout, 'reconfigure'):
 # 1. INITIALIZE GOOGLE EARTH ENGINE
 # ---------------------------------------------------------------------------
 print("[Step 0] Initializing Google Earth Engine...")
-ee.Initialize(project="mineguard-ai-507807")
-print("  [OK] Earth Engine connected successfully!\n")
+GEE_PROJECT = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
+ee.Initialize(project=GEE_PROJECT)
+print(f"  [OK] Earth Engine connected successfully with project: {GEE_PROJECT}!\n")
 
 # ---------------------------------------------------------------------------
 # 2. CONFIGURATION

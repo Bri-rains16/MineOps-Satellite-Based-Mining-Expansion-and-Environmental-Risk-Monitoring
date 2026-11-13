@@ -1,5 +1,9 @@
+# Environment variables & Secrets
+.env
+
 # Virtual Environment
 .venv/
+venv/
 __pycache__/
 
 # Datasets and Heavy Weights
@@ -11,3 +15,6 @@ outputs/maps/*.tif
 
 # OS Files
 .DS_Store
+
+#helper files
+help.txt

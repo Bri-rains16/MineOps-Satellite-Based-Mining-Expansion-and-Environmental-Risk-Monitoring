@@ -1,12 +1,16 @@
 import ee
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ============================================================
 # 1. INITIALIZE EARTH ENGINE
 # ============================================================
 
-ee.Initialize(project="mineguard-ai-507807")
+GEE_PROJECT = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
+ee.Initialize(project=GEE_PROJECT)
 
 print("Earth Engine connected successfully!")
 

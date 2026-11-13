@@ -1,5 +1,10 @@
+import os
 import ee
-ee.Initialize(project='mineguard-ai-507807')
+from dotenv import load_dotenv
+
+load_dotenv()
+GEE_PROJECT = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
+ee.Initialize(project=GEE_PROJECT)
 
 worldcover = ee.ImageCollection('ESA/WorldCover/v200').first()
 

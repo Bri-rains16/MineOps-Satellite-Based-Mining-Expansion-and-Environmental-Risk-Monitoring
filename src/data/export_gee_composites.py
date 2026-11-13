@@ -3,12 +3,16 @@ import yaml
 import geemap
 import geopandas as gpd
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # 1. Load config
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
-ee.Initialize(project='mineops-major-porject')
+GEE_PROJECT = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
+ee.Initialize(project=GEE_PROJECT)
 
 # 2. Load AOI boundary
 aoi_gdf = gpd.read_file(config['data']['aoi_path'])
