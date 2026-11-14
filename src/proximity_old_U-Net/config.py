@@ -22,7 +22,7 @@ class ProximityConfig:
     ee_project: str = os.getenv("GEE_PROJECT_ID", "major-project-1-508714")
     dynamic_world_dir: str = "data/zawar/dynamic_world"
     unet_maps_dir: str = "outputs/maps"
-    output_dir: str = "outputs/proximity"
+    output_dir: str = "outputs/proximity_old_U-Net"
     min_component_area_m2: float = 1000.0
     noise_filter_kernel_size: int = 3
     dw_min_confidence: float = 0.35

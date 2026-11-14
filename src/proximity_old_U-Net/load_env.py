@@ -22,7 +22,7 @@ from shapely.validation import make_valid
 
 log = logging.getLogger(__name__)
 
-ENV_DIR = Path("outputs/proximity/environmental_features")
+ENV_DIR = Path("outputs/proximity_old_U-Net/environmental_features")
 AOI_PATH = Path("data/zawar/aoi.geojson")
 TARGET_CRS = "EPSG:32643"
 

@@ -23,7 +23,7 @@ from shapely.validation import make_valid
 log = logging.getLogger(__name__)
 
 UNET_DIR = Path("outputs/maps")
-OUT_DIR = Path("outputs/proximity/mining_polygons")
+OUT_DIR = Path("outputs/proximity_old_U-Net/mining_polygons")
 MIN_AREA_M2 = 1_000          # drop components smaller than 0.1 ha
 BINARY_THRESHOLD = 0.5
 

@@ -16,7 +16,8 @@ from shapely.validation import make_valid
 
 log = logging.getLogger(__name__)
 
-RF_POLYGONS_DIR = Path("outputs/polygons")
+# Check renamed folder first, fallback to original if needed
+RF_POLYGONS_DIR = Path("outputs/polygons_2021") if Path("outputs/polygons_2021").exists() else Path("outputs/polygons")
 TARGET_CRS = "EPSG:32643"
 
 CLASS_LABELS = {

@@ -24,7 +24,7 @@ import pandas as pd
 
 log = logging.getLogger(__name__)
 
-CHARTS_DIR = Path("outputs/proximity/charts")
+CHARTS_DIR = Path("outputs/proximity_old_U-Net/charts")
 
 _CHART_CONFIG = [
     {

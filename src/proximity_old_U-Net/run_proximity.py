@@ -36,14 +36,14 @@ logging.basicConfig(
 )
 log = logging.getLogger("proximity")
 
-from src.proximity.vectorize_mining import vectorize_year
-from src.proximity.load_env import load_env_year
-from src.proximity.compute_distances import compute_distances_year
-from src.proximity.make_charts import make_charts
+from .vectorize_mining import vectorize_year
+from .load_env import load_env_year
+from .compute_distances import compute_distances_year
+from .make_charts import make_charts
 
 YEARS = list(range(2021, 2027))
-METRICS_DIR = Path("outputs/proximity/annual_metrics")
-SUMMARY_CSV  = Path("outputs/proximity/proximity_summary.csv")
+METRICS_DIR = Path("outputs/proximity_old_U-Net/annual_metrics")
+SUMMARY_CSV  = Path("outputs/proximity_old_U-Net/proximity_summary.csv")
 
 
 def run_one_year(year: int) -> pd.DataFrame:
@@ -148,7 +148,7 @@ def main() -> None:
     # Charts only make sense if we have multiple years
     if len(all_dfs) > 1:
         make_charts(summary)
-        log.info("Charts saved to outputs/proximity/charts/")
+        log.info("Charts saved to outputs/proximity_old_U-Net/charts/")
     else:
         log.info("Single-year run — skipping chart generation (needs multiple years).")
 

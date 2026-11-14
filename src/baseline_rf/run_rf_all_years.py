@@ -50,7 +50,7 @@ SCALE = 10
 SAMPLES_PER_CLASS = 500
 
 CLASSIFIED_DIR = Path("outputs/classified")
-POLYGONS_CLEAN_DIR = Path("outputs/polygons_rf_clean")
+POLYGONS_CLEAN_DIR = Path("outputs/polygons_rf_clean_2021-2026")
 CLASSIFIED_DIR.mkdir(parents=True, exist_ok=True)
 POLYGONS_CLEAN_DIR.mkdir(parents=True, exist_ok=True)
 

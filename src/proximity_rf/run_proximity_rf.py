@@ -34,7 +34,7 @@ from src.proximity_rf.metrics import (
 )
 from src.proximity_rf.visualizer import plot_gis_map, plot_charts
 
-OUTPUT_BASE = Path("outputs/proximity_rf")
+OUTPUT_BASE = Path("outputs/proximity_rf_2021")
 COMPONENTS_DIR = OUTPUT_BASE / "components"
 BUFFERS_DIR = OUTPUT_BASE / "buffer_exposure"
 CHARTS_DIR = OUTPUT_BASE / "charts"

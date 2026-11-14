@@ -40,7 +40,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("proximity_rf_clean")
 
-INPUT_DIR = Path("outputs/polygons_rf_clean")
+INPUT_DIR = Path("outputs/polygons_rf_clean_2021-2026")
 OUTPUT_BASE = Path("outputs/proximity_rf_clean_2021-2026")
 COMPONENTS_DIR = OUTPUT_BASE / "components"
 BUFFERS_DIR = OUTPUT_BASE / "buffer_exposure"

@@ -39,7 +39,7 @@ SCALE = 10
 SAMPLES_PER_CLASS = 500
 
 OUTPUT_DIR = "outputs"
-POLYGONS_DIR = os.path.join(OUTPUT_DIR, "polygons")
+POLYGONS_DIR = os.path.join(OUTPUT_DIR, "polygons_2021")
 CLASSIFIED_DIR = os.path.join(OUTPUT_DIR, "classified")
 os.makedirs(POLYGONS_DIR, exist_ok=True)
 os.makedirs(CLASSIFIED_DIR, exist_ok=True)
