@@ -6,8 +6,8 @@
 venv/
 __pycache__/
 
-# Datasets and Heavy Weights
-data/
+# Datasets and Heavy Weights (Root data directory)
+/data/
 outputs/models/*.pth
 outputs/maps/*.tif
 outputs/
@@ -17,5 +17,5 @@ outputs/
 # OS Files
 .DS_Store
 
-#helper files
+# Helper files
 help.txt

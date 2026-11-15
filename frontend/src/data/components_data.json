@@ -1,0 +1,4568 @@
+{
+  "2021": [
+    {
+      "year": 2021,
+      "component_id": "MB_2021_001",
+      "area_ha": 1.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_002",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 58.31,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_003",
+      "area_ha": 37.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 160.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_004",
+      "area_ha": 0.73,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1557.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_005",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 1013.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_006",
+      "area_ha": 0.43,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 510.88,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_007",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 36.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_008",
+      "area_ha": 0.3,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 140.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_009",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 110.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_010",
+      "area_ha": 0.14,
+      "dist_settlement_m": 70.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1380.04,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_011",
+      "area_ha": 2.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 126.49,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_012",
+      "area_ha": 3.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 544.89,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_013",
+      "area_ha": 0.42,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_014",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 350.57,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_015",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 188.68,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_016",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 358.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_017",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 360.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_018",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 664.83,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_019",
+      "area_ha": 2.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 772.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_020",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 754.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_021",
+      "area_ha": 0.3,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 832.59,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_022",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 888.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_023",
+      "area_ha": 0.54,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1032.76,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_024",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1190.17,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_025",
+      "area_ha": 33.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 510.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_026",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_027",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 228.04,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_028",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 262.49,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_029",
+      "area_ha": 0.62,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 200.25,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_030",
+      "area_ha": 72.42,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_031",
+      "area_ha": 0.26,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 266.27,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_032",
+      "area_ha": 3.04,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 661.89,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_033",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 941.49,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_034",
+      "area_ha": 0.6,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 788.48,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_035",
+      "area_ha": 0.69,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 898.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_036",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 902.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_037",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1033.1,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_038",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1074.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_039",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 530.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_040",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 487.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_041",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_042",
+      "area_ha": 0.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 320.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_043",
+      "area_ha": 0.76,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 400.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_044",
+      "area_ha": 0.63,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 460.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_045",
+      "area_ha": 3.64,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 215.41,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_046",
+      "area_ha": 24.58,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_047",
+      "area_ha": 0.52,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 116.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_048",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 60.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_049",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_050",
+      "area_ha": 0.26,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_051",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 350.14,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_052",
+      "area_ha": 1.09,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 44.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_053",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 60.0,
+      "dist_water_m": 94.34,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_054",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 375.77,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_055",
+      "area_ha": 33.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 740.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_056",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 657.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_057",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 557.85,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_058",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 654.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_059",
+      "area_ha": 0.26,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 28.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_060",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 70.71,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_061",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 183.85,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_062",
+      "area_ha": 0.37,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 445.53,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_063",
+      "area_ha": 0.59,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 510.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_064",
+      "area_ha": 1.58,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 545.89,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_065",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 700.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_066",
+      "area_ha": 0.37,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1116.15,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_067",
+      "area_ha": 0.23,
+      "dist_settlement_m": 290.69,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1297.69,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_068",
+      "area_ha": 1.34,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_069",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 380.13,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_070",
+      "area_ha": 0.85,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 110.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_071",
+      "area_ha": 0.33,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 197.23,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_072",
+      "area_ha": 3.91,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 44.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_073",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 394.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_074",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 623.7,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_075",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 290.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_076",
+      "area_ha": 0.26,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 256.32,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_077",
+      "area_ha": 0.98,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 421.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_078",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 186.82,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_079",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 228.04,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_080",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 752.86,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_081",
+      "area_ha": 0.53,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 885.66,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_082",
+      "area_ha": 0.95,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 988.38,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_083",
+      "area_ha": 0.46,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1357.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_084",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 398.12,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_085",
+      "area_ha": 0.37,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 399.25,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_086",
+      "area_ha": 0.52,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 314.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_087",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1002.25,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_088",
+      "area_ha": 0.74,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 902.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_089",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 67.08,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_090",
+      "area_ha": 1.59,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 2170.92,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_091",
+      "area_ha": 0.47,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_092",
+      "area_ha": 1.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_093",
+      "area_ha": 4.68,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_094",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1142.8,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_095",
+      "area_ha": 38.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 290.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_096",
+      "area_ha": 0.59,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 1129.29,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_097",
+      "area_ha": 0.66,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 2599.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2021,
+      "component_id": "MB_2021_098",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 2460.18,
+      "category": "Mine/Bare Land"
+    }
+  ],
+  "2022": [
+    {
+      "year": 2022,
+      "component_id": "MB_2022_001",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1533.1,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_002",
+      "area_ha": 1.0,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 2171.54,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_003",
+      "area_ha": 37.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 820.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_004",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 858.43,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_005",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1443.09,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_006",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 302.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_007",
+      "area_ha": 2.02,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 136.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_008",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 44.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_009",
+      "area_ha": 2.54,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 551.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_010",
+      "area_ha": 0.41,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 360.56,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_011",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 22.36,
+      "dist_water_m": 210.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_012",
+      "area_ha": 0.95,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_013",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 192.09,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_014",
+      "area_ha": 33.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 530.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_015",
+      "area_ha": 0.33,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 141.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_016",
+      "area_ha": 0.42,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_017",
+      "area_ha": 78.83,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_018",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 270.19,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_019",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_020",
+      "area_ha": 2.51,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 728.35,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_021",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 819.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_022",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 798.31,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_023",
+      "area_ha": 0.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 344.09,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_024",
+      "area_ha": 0.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_025",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 621.69,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_026",
+      "area_ha": 0.34,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 694.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_027",
+      "area_ha": 0.96,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_028",
+      "area_ha": 0.36,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 413.4,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_029",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 60.0,
+      "dist_water_m": 125.3,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_030",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.99,
+      "dist_water_m": 110.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_031",
+      "area_ha": 1.08,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_032",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 329.85,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_033",
+      "area_ha": 0.47,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 90.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_034",
+      "area_ha": 3.59,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 215.41,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_035",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 250.8,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_036",
+      "area_ha": 23.78,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_037",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 252.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_038",
+      "area_ha": 0.39,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 116.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_039",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 50.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_040",
+      "area_ha": 0.35,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 606.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_041",
+      "area_ha": 33.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 450.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_042",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 89.44,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_043",
+      "area_ha": 0.52,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 152.97,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_044",
+      "area_ha": 1.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 406.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_045",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 201.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_046",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 177.2,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_047",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 120.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_048",
+      "area_ha": 0.93,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 58.31,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_049",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 14.14,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_050",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 530.38,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_051",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 559.02,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_052",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1293.56,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_053",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1287.52,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_054",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.99,
+      "dist_water_m": 427.2,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_055",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 161.25,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_056",
+      "area_ha": 0.43,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 44.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_057",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 260.77,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_058",
+      "area_ha": 0.67,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 375.77,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_059",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 290.69,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_060",
+      "area_ha": 0.3,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 116.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_061",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 730.55,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_062",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 212.13,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_063",
+      "area_ha": 0.67,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_064",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 22.36,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_065",
+      "area_ha": 3.39,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_066",
+      "area_ha": 0.39,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 220.91,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_067",
+      "area_ha": 38.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_068",
+      "area_ha": 0.59,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 22.36,
+      "dist_water_m": 848.53,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_069",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 814.98,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_070",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 92.2,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_071",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 1617.44,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2022,
+      "component_id": "MB_2022_072",
+      "area_ha": 0.51,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1472.75,
+      "category": "Mine/Bare Land"
+    }
+  ],
+  "2023": [
+    {
+      "year": 2023,
+      "component_id": "MB_2023_001",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 350.14,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_002",
+      "area_ha": 0.88,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 572.45,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_003",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.0,
+      "dist_water_m": 555.43,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_004",
+      "area_ha": 37.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_005",
+      "area_ha": 0.78,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 291.55,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_006",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1151.56,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_007",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 1160.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_008",
+      "area_ha": 0.5,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 456.95,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_009",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 67.08,
+      "dist_water_m": 250.8,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_010",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 44.72,
+      "dist_water_m": 211.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_011",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.0,
+      "dist_water_m": 187.88,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_012",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_013",
+      "area_ha": 0.36,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 41.23,
+      "dist_water_m": 184.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_014",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 476.76,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_015",
+      "area_ha": 0.36,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 80.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_016",
+      "area_ha": 0.71,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 313.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_017",
+      "area_ha": 2.82,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_018",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 176.92,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_019",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 31.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_020",
+      "area_ha": 0.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 85.44,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_021",
+      "area_ha": 0.55,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 155.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_022",
+      "area_ha": 0.93,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_023",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 84.85,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_024",
+      "area_ha": 33.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 380.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_025",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_026",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_027",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 264.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_028",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 202.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_029",
+      "area_ha": 81.94,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_030",
+      "area_ha": 0.3,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 190.26,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_031",
+      "area_ha": 1.91,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 601.66,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_032",
+      "area_ha": 0.36,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 41.23,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_033",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 223.61,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_034",
+      "area_ha": 0.36,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_035",
+      "area_ha": 0.43,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 70.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_036",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 760.26,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_037",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 70.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_038",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_039",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 340.59,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_040",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 441.81,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_041",
+      "area_ha": 0.61,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 473.81,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_042",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 44.72,
+      "dist_water_m": 394.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_043",
+      "area_ha": 24.88,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_044",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 240.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_045",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 131.53,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_046",
+      "area_ha": 0.68,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_047",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 130.0,
+      "dist_water_m": 114.02,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_048",
+      "area_ha": 0.47,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 60.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_049",
+      "area_ha": 4.83,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_050",
+      "area_ha": 33.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 340.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_051",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1137.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_052",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 480.1,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_053",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_054",
+      "area_ha": 0.73,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 350.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_055",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 28.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_056",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 300.83,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_057",
+      "area_ha": 0.42,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 511.57,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_058",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 612.21,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_059",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 86.02,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_060",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_061",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 94.34,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_062",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.0,
+      "dist_water_m": 158.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_063",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 191.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_064",
+      "area_ha": 0.66,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 14.14,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_065",
+      "area_ha": 0.46,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 120.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_066",
+      "area_ha": 0.83,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 353.41,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_067",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 44.72,
+      "dist_water_m": 101.98,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_068",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 58.31,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_069",
+      "area_ha": 0.49,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 174.93,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_070",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_071",
+      "area_ha": 0.34,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 620.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_072",
+      "area_ha": 0.68,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_073",
+      "area_ha": 0.32,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 50.99,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_074",
+      "area_ha": 2.32,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_075",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 36.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_076",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 120.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_077",
+      "area_ha": 38.05,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_078",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.0,
+      "dist_water_m": 965.4,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2023,
+      "component_id": "MB_2023_079",
+      "area_ha": 0.44,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 44.72,
+      "dist_water_m": 885.66,
+      "category": "Mine/Bare Land"
+    }
+  ],
+  "2024": [
+    {
+      "year": 2024,
+      "component_id": "MB_2024_001",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 220.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_002",
+      "area_ha": 0.68,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 161.25,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_003",
+      "area_ha": 37.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 150.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_004",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_005",
+      "area_ha": 0.33,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 184.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_006",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1043.93,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_007",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 100.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_008",
+      "area_ha": 0.92,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 430.12,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_009",
+      "area_ha": 0.73,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 302.32,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_010",
+      "area_ha": 0.73,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 148.66,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_011",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 184.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_012",
+      "area_ha": 0.38,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 290.69,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_013",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 303.64,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_014",
+      "area_ha": 2.66,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_015",
+      "area_ha": 1.73,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 509.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_016",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 574.89,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_017",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_018",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 655.21,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_019",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 402.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_020",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 421.07,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_021",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 210.95,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_022",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 196.47,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_023",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 313.21,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_024",
+      "area_ha": 1.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 265.71,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_025",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 206.16,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_026",
+      "area_ha": 33.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 360.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_027",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_028",
+      "area_ha": 82.44,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_029",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 42.43,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_030",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 261.73,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_031",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 356.09,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_032",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 36.06,
+      "dist_water_m": 200.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_033",
+      "area_ha": 4.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_034",
+      "area_ha": 0.37,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 36.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_035",
+      "area_ha": 0.57,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_036",
+      "area_ha": 33.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 130.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_037",
+      "area_ha": 0.58,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 240.83,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_038",
+      "area_ha": 0.45,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 269.26,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_039",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 540.37,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_040",
+      "area_ha": 26.67,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_041",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 141.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_042",
+      "area_ha": 0.48,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_043",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 76.16,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_044",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_045",
+      "area_ha": 4.44,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_046",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 276.59,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_047",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 654.6,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_048",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 31.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_049",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_050",
+      "area_ha": 0.51,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 362.35,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_051",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 362.35,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_052",
+      "area_ha": 0.43,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 192.35,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_053",
+      "area_ha": 0.65,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 434.17,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_054",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 715.12,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_055",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 36.06,
+      "dist_water_m": 28.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_056",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 517.88,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_057",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 511.57,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_058",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_059",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_060",
+      "area_ha": 0.51,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 50.99,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_061",
+      "area_ha": 1.66,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_062",
+      "area_ha": 38.05,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 170.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_063",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 1161.81,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_064",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1316.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_065",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 973.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_066",
+      "area_ha": 0.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 865.79,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2024,
+      "component_id": "MB_2024_067",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 70.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    }
+  ],
+  "2025": [
+    {
+      "year": 2025,
+      "component_id": "MB_2025_001",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 80.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_002",
+      "area_ha": 0.68,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_003",
+      "area_ha": 37.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_004",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 269.26,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_005",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 180.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_006",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 41.23,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_007",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_008",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 50.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_009",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1775.89,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_010",
+      "area_ha": 0.41,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1705.58,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_011",
+      "area_ha": 0.12,
+      "dist_settlement_m": 94.87,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1109.1,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_012",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 850.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_013",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 36.06,
+      "dist_water_m": 470.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_014",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_015",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_016",
+      "area_ha": 0.35,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 170.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_017",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 328.02,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_018",
+      "area_ha": 0.51,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 70.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_019",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 28.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_020",
+      "area_ha": 0.4,
+      "dist_settlement_m": 20.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1296.92,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_021",
+      "area_ha": 2.01,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 863.13,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_022",
+      "area_ha": 1.06,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 22.36,
+      "dist_water_m": 758.95,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_023",
+      "area_ha": 3.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 136.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_024",
+      "area_ha": 0.25,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 500.1,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_025",
+      "area_ha": 4.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 506.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_026",
+      "area_ha": 0.26,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 701.78,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_027",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_028",
+      "area_ha": 0.82,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 174.64,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_029",
+      "area_ha": 2.07,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 543.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_030",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 622.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_031",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 219.54,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_032",
+      "area_ha": 0.48,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1212.97,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_033",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1191.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_034",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 914.44,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_035",
+      "area_ha": 0.35,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 424.26,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_036",
+      "area_ha": 0.49,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 800.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_037",
+      "area_ha": 33.39,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 360.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_038",
+      "area_ha": 0.19,
+      "dist_settlement_m": 364.97,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1681.34,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_039",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_040",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 252.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_041",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 724.71,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_042",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 727.8,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_043",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 523.93,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_044",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 196.98,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_045",
+      "area_ha": 85.59,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_046",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 22.36,
+      "dist_water_m": 44.72,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_047",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 36.06,
+      "dist_water_m": 410.12,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_048",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 444.07,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_049",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 128.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_050",
+      "area_ha": 4.26,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_051",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 130.0,
+      "dist_water_m": 121.66,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_052",
+      "area_ha": 0.83,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 36.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_053",
+      "area_ha": 0.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 622.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_054",
+      "area_ha": 33.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 740.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_055",
+      "area_ha": 0.15,
+      "dist_settlement_m": 370.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1763.77,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_056",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 782.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_057",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1328.5,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_058",
+      "area_ha": 0.38,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1195.41,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_059",
+      "area_ha": 0.57,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 487.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_060",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 253.18,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_061",
+      "area_ha": 31.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_062",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 304.14,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_063",
+      "area_ha": 0.39,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 141.42,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_064",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 63.25,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_065",
+      "area_ha": 0.38,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_066",
+      "area_ha": 0.41,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_067",
+      "area_ha": 5.3,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_068",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 230.22,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_069",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 667.53,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_070",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 1050.95,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_071",
+      "area_ha": 0.19,
+      "dist_settlement_m": 10.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 2046.29,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_072",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 679.12,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_073",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 36.06,
+      "dist_water_m": 277.31,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_074",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 50.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_075",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 41.23,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_076",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 233.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_077",
+      "area_ha": 0.55,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 375.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_078",
+      "area_ha": 0.34,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 608.77,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_079",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 374.83,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_080",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 768.51,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_081",
+      "area_ha": 0.65,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 440.45,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_082",
+      "area_ha": 0.53,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 689.49,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_083",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 36.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_084",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_085",
+      "area_ha": 1.01,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_086",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 294.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_087",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 520.38,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_088",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 550.82,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_089",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 537.59,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_090",
+      "area_ha": 0.14,
+      "dist_settlement_m": 133.42,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1562.05,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_091",
+      "area_ha": 0.11,
+      "dist_settlement_m": 190.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1514.89,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_092",
+      "area_ha": 0.47,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1252.52,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_093",
+      "area_ha": 0.15,
+      "dist_settlement_m": 10.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1337.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_094",
+      "area_ha": 1.07,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 421.9,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_095",
+      "area_ha": 2.46,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 402.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_096",
+      "area_ha": 0.67,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 891.07,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_097",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 72.11,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_098",
+      "area_ha": 0.93,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 111.8,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_099",
+      "area_ha": 0.21,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 41.23,
+      "dist_water_m": 70.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_100",
+      "area_ha": 0.49,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 237.7,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_101",
+      "area_ha": 1.5,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 28.28,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_102",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 950.47,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_103",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 1036.97,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_104",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 1051.71,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_105",
+      "area_ha": 42.33,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_106",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 1161.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_107",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1446.27,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_108",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1353.7,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2025,
+      "component_id": "MB_2025_109",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 671.79,
+      "category": "Mine/Bare Land"
+    }
+  ],
+  "2026": [
+    {
+      "year": 2026,
+      "component_id": "MB_2026_001",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 120.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_002",
+      "area_ha": 37.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 30.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_003",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 72.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_004",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 274.59,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_005",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 554.44,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_006",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 1303.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_007",
+      "area_ha": 0.3,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1343.32,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_008",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1082.4,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_009",
+      "area_ha": 0.7,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 987.32,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_010",
+      "area_ha": 2.02,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 730.82,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_011",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 910.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_012",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_013",
+      "area_ha": 0.38,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_014",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 184.39,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_015",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 340.59,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_016",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 747.26,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_017",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 80.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_018",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 471.7,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_019",
+      "area_ha": 3.03,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 122.07,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_020",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 194.16,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_021",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 360.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_022",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_023",
+      "area_ha": 1.01,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 53.85,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_024",
+      "area_ha": 0.16,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 186.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_025",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 50.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_026",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 190.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_027",
+      "area_ha": 33.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 230.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_028",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 263.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_029",
+      "area_ha": 0.28,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_030",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 140.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_031",
+      "area_ha": 1.99,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 599.08,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_032",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 40.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_033",
+      "area_ha": 85.84,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_034",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 41.23,
+      "dist_water_m": 420.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_035",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 50.0,
+      "dist_water_m": 186.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_036",
+      "area_ha": 4.06,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_037",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_038",
+      "area_ha": 0.15,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 30.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_039",
+      "area_ha": 0.34,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 41.23,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_040",
+      "area_ha": 0.29,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_041",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 63.25,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_042",
+      "area_ha": 0.38,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 76.16,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_043",
+      "area_ha": 4.84,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_044",
+      "area_ha": 33.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 20.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_045",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1145.86,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_046",
+      "area_ha": 0.18,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 686.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_047",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1156.24,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_048",
+      "area_ha": 0.37,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 487.65,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_049",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 197.23,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_050",
+      "area_ha": 30.2,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_051",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 36.06,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_052",
+      "area_ha": 1.04,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_053",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 158.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_054",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 60.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_055",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_056",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 114.02,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_057",
+      "area_ha": 0.19,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 622.01,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_058",
+      "area_ha": 0.11,
+      "dist_settlement_m": 63.25,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 2029.7,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_059",
+      "area_ha": 0.11,
+      "dist_settlement_m": 14.14,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1543.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_060",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 326.5,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_061",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 604.4,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_062",
+      "area_ha": 0.13,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 44.72,
+      "dist_water_m": 423.79,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_063",
+      "area_ha": 0.24,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 14.14,
+      "dist_water_m": 226.27,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_064",
+      "area_ha": 0.61,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 350.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_065",
+      "area_ha": 0.57,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 610.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_066",
+      "area_ha": 0.23,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 539.35,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_067",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 1494.82,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_068",
+      "area_ha": 0.31,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_069",
+      "area_ha": 0.53,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 10.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_070",
+      "area_ha": 0.49,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_071",
+      "area_ha": 0.12,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 60.83,
+      "dist_water_m": 72.8,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_072",
+      "area_ha": 0.67,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 22.36,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_073",
+      "area_ha": 0.11,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 10.0,
+      "dist_water_m": 688.84,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_074",
+      "area_ha": 38.07,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 160.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_075",
+      "area_ha": 0.27,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 31.62,
+      "dist_water_m": 888.43,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_076",
+      "area_ha": 0.14,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 67.08,
+      "dist_water_m": 0.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_077",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 36.06,
+      "dist_water_m": 70.0,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_078",
+      "area_ha": 0.17,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 20.0,
+      "dist_water_m": 28.28,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_079",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 40.0,
+      "dist_water_m": 158.11,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_080",
+      "area_ha": 0.22,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 22.36,
+      "dist_water_m": 80.62,
+      "category": "Mine/Bare Land"
+    },
+    {
+      "year": 2026,
+      "component_id": "MB_2026_081",
+      "area_ha": 0.1,
+      "dist_settlement_m": 0.0,
+      "dist_forest_m": 0.0,
+      "dist_water_m": 162.79,
+      "category": "Mine/Bare Land"
+    }
+  ]
+}
