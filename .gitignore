@@ -8,9 +8,11 @@ __pycache__/
 
 # Datasets and Heavy Weights (Root data directory)
 /data/
-outputs/models/*.pth
-outputs/maps/*.tif
 outputs/
+=======
+# Datasets and Heavy Weights
+data/
+>>>>>>> c7f37a5 (Upload model weights and output maps for dashboard)
 *.npy
 *.parquet
 
