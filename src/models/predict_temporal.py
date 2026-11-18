@@ -15,7 +15,9 @@ device = "mps" if torch.backends.mps.is_available() else "cpu"
 print("Loading model for multi-temporal inference...")
 model = build_model(in_channels=3)
 model = adapt_input_channels(model, new_channels=10)
-model.load_state_dict(torch.load("outputs/models/unet_zawar_finetuned.pth", weights_only=True))
+
+# Updated to load the Best IoU weights
+model.load_state_dict(torch.load("outputs/models/unet_zawar_finetuned_bestiou.pth", weights_only=True))
 model = model.to(device)
 model.eval()
 
@@ -47,7 +49,8 @@ with torch.no_grad():
         tensor_img = torch.from_numpy(padded_img).unsqueeze(0).to(device)
         
         output = model(tensor_img)
-        pred = (output > 0.0).float().squeeze().cpu().numpy()
+        # Force the model to be 80% confident before marking a pixel as a mine
+        pred = (torch.sigmoid(output) > 0.8).float().squeeze().cpu().numpy()
         
         # Crop back to exact geographical bounds
         pred = pred[:orig_h, :orig_w]

@@ -1,32 +1,32 @@
 [
     {
         "year": 2021,
-        "area_hectares": 99.32,
+        "area_hectares": 94.38,
         "expansion_ha": 0.0
     },
     {
         "year": 2022,
-        "area_hectares": 100.63,
-        "expansion_ha": 1.31
+        "area_hectares": 95.32,
+        "expansion_ha": 0.94
     },
     {
         "year": 2023,
-        "area_hectares": 107.62,
-        "expansion_ha": 6.99
+        "area_hectares": 103.83,
+        "expansion_ha": 8.51
     },
     {
         "year": 2024,
-        "area_hectares": 124.69,
-        "expansion_ha": 17.07
+        "area_hectares": 127.19,
+        "expansion_ha": 23.36
     },
     {
         "year": 2025,
-        "area_hectares": 124.73,
-        "expansion_ha": 0.04
+        "area_hectares": 132.18,
+        "expansion_ha": 4.99
     },
     {
         "year": 2026,
-        "area_hectares": 114.6,
-        "expansion_ha": -10.13
+        "area_hectares": 117.51,
+        "expansion_ha": -14.67
     }
 ]
