@@ -19,10 +19,7 @@ export default function ReportsPage() {
     <div className="space-y-6">
       {/* Header */}
       <div className="pb-2 border-b border-slate-200">
-        <h2 className="text-xl font-bold text-slate-900 tracking-tight">Reports &amp; Verified Output Exports</h2>
-        <p className="text-xs text-slate-500 mt-0.5">
-          Curated primary project exports and analytical outputs verified by the backend
-        </p>
+        <h2 className="text-xl font-bold text-slate-900 tracking-tight">Reports and Output Exports</h2>
       </div>
 
       {/* Featured Primary Exports Cards */}

@@ -39,7 +39,7 @@ export default function Sidebar({ activePage, setActivePage }) {
           {/* <span className="text-teal-400 font-mono text-[10px]">EPSG:32643</span> */}
         </div>
         <p className="text-xs font-medium text-slate-200 truncate">Zawar Mines, Udaipur</p>
-        <p className="text-[10px] text-slate-400 mt-0.5">Sentinel-2 (10m Resolution)</p>
+        <p className="text-[10px] text-slate-400 mt-0.5">Sentinel-2</p>
       </div>
 
       {/* 5-Item Navigation */}

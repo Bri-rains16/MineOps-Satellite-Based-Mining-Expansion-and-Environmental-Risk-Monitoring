@@ -70,23 +70,6 @@ export default function UnetPage({ selectedYear, setSelectedYear }) {
         </div>
       )}
 
-      {/* Deep Learning Model Verification Banner */}
-      <div className="bg-emerald-50 border border-emerald-200/90 rounded-xl p-4 flex items-start gap-3 shadow-xs">
-        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-        <div className="text-xs text-emerald-950 space-y-1">
-          <p className="font-bold flex items-center gap-2">
-            <span>Model Status: Fine-Tuned ResNet-34 U-Net</span>
-            <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-200 font-mono text-emerald-900 font-semibold">
-              genuine_inference: true
-            </span>
-          </p>
-          <p className="text-emerald-800 leading-normal">
-            {data?.model_status?.note || 
-              "Fine-tuned ResNet-34 10-band U-Net model trained on Zawar Sentinel-2 imagery with genuine deep learning spatial boundary predictions."}
-          </p>
-        </div>
-      </div>
-
       {/* Top Metric Cards (Driven by backend GET /api/unet/:year) */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">

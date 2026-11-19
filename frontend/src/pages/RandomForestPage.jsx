@@ -189,7 +189,6 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
             <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-2">
               Class Breakdown (ha)
             </h3>
-            <p className="text-[11px] text-slate-500 mb-3">Live values from backend API</p>
             <div className="h-44 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>

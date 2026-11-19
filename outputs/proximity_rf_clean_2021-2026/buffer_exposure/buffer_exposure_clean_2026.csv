@@ -1,0 +1,4 @@
+year,buffer_radius_m,buffer_total_area_ha,settlement_exposed_ha,settlement_exposure_pct,forest_exposed_ha,forest_exposure_pct,water_exposed_ha,water_exposure_pct
+2026,250,3367.86,510.2,46.15,1671.8,25.56,4.73,50.53
+2026,500,6657.73,834.94,75.53,3668.65,56.1,5.75,61.43
+2026,1000,11255.14,1090.75,98.67,5979.23,91.43,8.7,92.95

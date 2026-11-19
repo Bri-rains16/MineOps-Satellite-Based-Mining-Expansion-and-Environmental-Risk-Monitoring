@@ -409,9 +409,6 @@ export default function InteractiveMap({
             </span>
           )}
         </div>
-        <div className="text-[11px] text-slate-400">
-          {showBufferControls ? bufferLayerData ? "Dissolved polygon buffer • EPSG:4326 • Computed from RF Mine class" : "Centroid indicator • See GIS Plate for raster/polygon buffer" : "EPSG:4326 GeoJSON • Verified against 10m Sentinel-2"}
-        </div>
       </div>
     </div>
   );

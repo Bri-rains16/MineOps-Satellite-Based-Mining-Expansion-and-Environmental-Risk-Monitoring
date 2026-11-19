@@ -145,7 +145,7 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
       )}
 
       {/* Proximity Summary Banner Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {/* Distance to Water */}
         <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
           <div className="flex items-center justify-between text-xs text-slate-500">
@@ -153,11 +153,11 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
             <Droplets className="w-4 h-4 text-sky-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{summary.dist_water_median_m?.toFixed(0) ?? 0}</span>
-            <span className="text-xs font-medium text-slate-500">m median</span>
+            <span className="text-2xl font-bold text-slate-900">{summary.dist_water_mean_m?.toFixed(0) ?? 0}</span>
+            <span className="text-xs font-medium text-slate-500">m mean</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-1">
-            Mean: {summary.dist_water_mean_m?.toFixed(0) ?? 0} m | Min: {summary.dist_water_min_m?.toFixed(0) ?? 0} m
+            Median: {summary.dist_water_median_m?.toFixed(0) ?? 0} m | Min: {summary.dist_water_min_m?.toFixed(0) ?? 0} m
           </p>
         </div>
 
@@ -168,11 +168,11 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
             <Home className="w-4 h-4 text-amber-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{summary.dist_settlement_median_m?.toFixed(0) ?? 0}</span>
-            <span className="text-xs font-medium text-slate-500">m median</span>
+            <span className="text-2xl font-bold text-slate-900">{summary.dist_settlement_mean_m?.toFixed(1) ?? 0}</span>
+            <span className="text-xs font-medium text-slate-500">m mean</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-1">
-            Mean: {summary.dist_settlement_mean_m?.toFixed(1) ?? 0} m | Min: {summary.dist_settlement_min_m?.toFixed(0) ?? 0} m
+            Median: {summary.dist_settlement_median_m?.toFixed(0) ?? 0} m | Min: {summary.dist_settlement_min_m?.toFixed(0) ?? 0} m
           </p>
         </div>
 
@@ -183,26 +183,11 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
             <Trees className="w-4 h-4 text-emerald-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{summary.dist_forest_median_m?.toFixed(0) ?? 0}</span>
-            <span className="text-xs font-medium text-slate-500">m median</span>
+            <span className="text-2xl font-bold text-slate-900">{summary.dist_forest_mean_m?.toFixed(1) ?? 0}</span>
+            <span className="text-xs font-medium text-slate-500">m mean</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-1">
-            Mean: {summary.dist_forest_mean_m?.toFixed(1) ?? 0} m | Min: {summary.dist_forest_min_m?.toFixed(0) ?? 0} m
-          </p>
-        </div>
-
-        {/* 500m Buffer Blast/Dust Impact */}
-        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
-          <div className="flex items-center justify-between text-xs text-slate-500">
-            <span className="font-semibold uppercase">500m Buffer Impact</span>
-            <ShieldAlert className="w-4 h-4 text-purple-600" />
-          </div>
-          <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{b500.settlement_exposed_ha?.toFixed(1) ?? 0}</span>
-            <span className="text-xs font-medium text-slate-500">ha</span>
-          </div>
-          <p className="text-[11px] text-slate-500 mt-1">
-            {b500.settlement_exposure_pct?.toFixed(1) ?? 0}% settlement &bull; {b500.forest_exposure_pct?.toFixed(1) ?? 0}% forest
+            Median: {summary.dist_forest_median_m?.toFixed(0) ?? 0} m | Min: {summary.dist_forest_min_m?.toFixed(0) ?? 0} m
           </p>
         </div>
       </div>
@@ -228,7 +213,7 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
               <ShieldAlert className="w-4 h-4 text-purple-600" /> Radial Buffer Exposure ({selectedYear})
             </h3>
             <p className="text-[11px] text-slate-500 mb-3">
-              Percentage of regional class areas engulfed inside the mine impact buffer
+              Percentage of regional class areas submerged inside the mine impact buffer
             </p>
 
             <div className="h-44 w-full">

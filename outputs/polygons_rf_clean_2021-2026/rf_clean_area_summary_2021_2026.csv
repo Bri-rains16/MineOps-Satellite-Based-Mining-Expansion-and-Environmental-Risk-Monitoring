@@ -1,0 +1,7 @@
+year,tif_path,geojson_path,class_0_Mine_ha,class_1_Settlement_ha,class_2_Forest_ha,class_3_Water_ha,total_area_ha
+2021,outputs\classified\zawar_classified_2021.tif,outputs\polygons_rf_clean\zawar_all_classes_clean_2021.geojson,310.26,909.1,6729.18,7.29,7955.83
+2022,outputs\classified\zawar_classified_2022.tif,outputs\polygons_rf_clean\zawar_all_classes_clean_2022.geojson,288.16,1332.22,6326.86,8.59,7955.83
+2023,outputs\classified\zawar_classified_2023.tif,outputs\polygons_rf_clean\zawar_all_classes_clean_2023.geojson,292.26,2073.2,5573.92,16.45,7955.83
+2024,outputs\classified\zawar_classified_2024.tif,outputs\polygons_rf_clean\zawar_all_classes_clean_2024.geojson,289.99,1105.82,6544.97,15.05,7955.83
+2025,outputs\classified\zawar_classified_2025.tif,outputs\polygons_rf_clean\zawar_all_classes_clean_2025.geojson,330.94,1165.09,6448.71,11.09,7955.83
+2026,outputs\classified\zawar_classified_2026.tif,outputs\polygons_rf_clean\zawar_all_classes_clean_2026.geojson,301.14,1105.5,6539.83,9.36,7955.83

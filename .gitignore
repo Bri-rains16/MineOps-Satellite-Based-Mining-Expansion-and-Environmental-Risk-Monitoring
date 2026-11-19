@@ -8,7 +8,7 @@ __pycache__/
 
 # Datasets and Heavy Weights (Root data directory)
 /data/
-outputs/
+# outputs/
 =======
 # Datasets and Heavy Weights
 data/
