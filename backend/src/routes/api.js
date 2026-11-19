@@ -9,9 +9,7 @@ import {
 
 const router = Router();
 
-/**
- * GET /api/health
- */
+  // GET /api/health
 router.get('/health', (req, res) => {
   res.status(200).json({
     status: 'ok',
@@ -21,10 +19,7 @@ router.get('/health', (req, res) => {
   });
 });
 
-/**
- * GET /api/overview?year=2026
- * Defaults to 2026 if not specified
- */
+//   GET /api/overview?year=2026
 router.get('/overview', (req, res, next) => {
   try {
     const rawYear = req.query.year !== undefined ? req.query.year : 2026;
@@ -39,9 +34,9 @@ router.get('/overview', (req, res, next) => {
   }
 });
 
-/**
- * GET /api/rf/:year
- */
+
+//  GET /api/rf/:year
+
 router.get('/rf/:year', (req, res, next) => {
   try {
     const { valid, year, error } = validateYear(req.params.year);
@@ -55,9 +50,8 @@ router.get('/rf/:year', (req, res, next) => {
   }
 });
 
-/**
- * GET /api/unet/:year
- */
+//  GET /api/unet/:year
+
 router.get('/unet/:year', (req, res, next) => {
   try {
     const { valid, year, error } = validateYear(req.params.year);
@@ -71,9 +65,7 @@ router.get('/unet/:year', (req, res, next) => {
   }
 });
 
-/**
- * GET /api/proximity/:year
- */
+//  GET /api/proximity/:year
 router.get('/proximity/:year', (req, res, next) => {
   try {
     const { valid, year, error } = validateYear(req.params.year);

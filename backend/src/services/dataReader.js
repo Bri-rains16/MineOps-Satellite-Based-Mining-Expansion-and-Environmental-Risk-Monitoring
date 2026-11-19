@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Project root is three levels up from backend/src/services
 export const PROJECT_ROOT = path.resolve(__dirname, '../../../');
 export const OUTPUTS_DIR = path.join(PROJECT_ROOT, 'outputs');
 

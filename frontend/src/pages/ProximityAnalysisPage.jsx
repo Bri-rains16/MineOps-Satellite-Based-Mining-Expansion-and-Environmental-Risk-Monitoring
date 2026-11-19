@@ -3,7 +3,7 @@ import InteractiveMap from "../components/InteractiveMap";
 import { 
   ShieldAlert, Droplets, Home, Trees, 
   ArrowUpDown, Filter, Image as ImageIcon,
-  ChevronLeft, ChevronRight, Loader2, AlertCircle
+  ChevronLeft, ChevronRight, Loader2, AlertCircle, Search
 } from "lucide-react";
 import { 
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, 
@@ -18,6 +18,7 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
 
   const [activeBufferRadius, setActiveBufferRadius] = useState(500);
   const [componentFilter, setComponentFilter] = useState("all");
+  const [searchId, setSearchId] = useState("");
   const [sortField, setSortField] = useState("dist_water_m");
   const [sortAsc, setSortAsc] = useState(true);
   const [showGisMapModal, setShowGisMapModal] = useState(false);
@@ -53,6 +54,9 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
 
   // Filter components
   const filteredComponents = rawComponents.filter((comp) => {
+    if (searchId.trim() && !comp.component_id.toLowerCase().includes(searchId.trim().toLowerCase())) {
+      return false;
+    }
     if (componentFilter === "immediate") return comp.dist_water_m <= 100;
     if (componentFilter === "medium") return comp.dist_water_m > 100 && comp.dist_water_m <= 300;
     if (componentFilter === "safe") return comp.dist_water_m > 300;
@@ -268,8 +272,22 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
             </h3>
           </div>
 
-          {/* Quick Category Filter */}
-          <div className="flex items-center gap-2">
+          {/* Search ID and Quick Category Filter */}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Search Mine ID (e.g. MB_2026_002)..."
+                value={searchId}
+                onChange={(e) => {
+                  setSearchId(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="text-xs pl-8 pr-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 w-52 focus:outline-teal-500"
+              />
+            </div>
+
             <Filter className="w-3.5 h-3.5 text-slate-400" />
             <select
               value={componentFilter}
@@ -314,7 +332,6 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
                 >
                   Dist to Forest (m) <ArrowUpDown className="w-3 h-3 inline ml-0.5 text-slate-400" />
                 </th>
-                <th className="py-2.5 px-4 text-center">Category</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 font-mono text-[11px] text-slate-700">
@@ -333,11 +350,6 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
                     </span>
                   </td>
                   <td className="py-2 px-4 text-right">{Number(row.dist_forest_m).toFixed(1)}</td>
-                  <td className="py-2 px-4 text-center font-sans">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-50 text-rose-700 border border-rose-200">
-                      {row.category}
-                    </span>
-                  </td>
                 </tr>
               ))}
             </tbody>

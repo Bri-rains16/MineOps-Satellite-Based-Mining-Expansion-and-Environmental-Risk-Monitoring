@@ -210,6 +210,7 @@ export default function InteractiveMap({
               <GeoJSON
                 key={`buffer-polygon-${activeBuffer}-${activeYear}`}
                 data={fc}
+                interactive={false}
                 style={() => ({
                   color: feat.properties.color || "#9B59B6",
                   fillColor: feat.properties.fillColor || "#9B59B6",
@@ -218,17 +219,7 @@ export default function InteractiveMap({
                   dashArray: feat.properties.dashArray || "8, 5",
                   opacity: feat.properties.opacity != null ? feat.properties.opacity : 0.8,
                 })}
-              >
-                <Popup>
-                  <div className="p-1 font-sans text-xs">
-                    <p className="font-bold text-slate-900">{feat.properties.label}</p>
-                    <p className="text-slate-500 text-[10px]">Year: {feat.properties.year}</p>
-                    <div className="mt-1 text-slate-700">
-                      Area: <span className="font-semibold">{feat.properties.area_ha && feat.properties.area_ha.toFixed(1)} ha</span>
-                    </div>
-                  </div>
-                </Popup>
-              </GeoJSON>
+              />
             );
           })()}
 
