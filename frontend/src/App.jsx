@@ -43,19 +43,19 @@ export default function App() {
             <span className="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md border border-teal-100 flex items-center gap-1.5">
               <Globe className="w-3.5 h-3.5" /> AOI: Zawar Mines, Rajasthan
             </span>
-            <span className="text-xs text-slate-400">&bull;</span>
-            <span className="text-xs text-slate-500 font-mono">EPSG:32643 &bull; Sentinel-2 MSI</span>
+            {/* <span className="text-xs text-slate-400">&bull;</span> */}
+            {/* <span className="text-xs text-slate-500 font-mono">EPSG:32643 &bull; Sentinel-2 MSI</span> */}
           </div>
 
           <div className="flex items-center gap-4 text-xs">
-            <div className="hidden sm:flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg text-slate-500">
+            {/* <div className="hidden sm:flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg text-slate-500">
               <Search className="w-3.5 h-3.5 text-slate-400" />
               <span>Search coordinates or pit ID...</span>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
               <span className="w-2 h-2 rounded-full bg-teal-500"></span>
-              <span className="font-semibold text-slate-700">Epoch: {selectedYear}</span>
+              <span className="font-semibold text-slate-700">Year: {selectedYear}</span>
             </div>
           </div>
         </header>

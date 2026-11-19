@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InteractiveMap from "../components/InteractiveMap";
 import { 
   ShieldAlert, Droplets, Home, Trees, 
   ArrowUpDown, Filter, Image as ImageIcon,
-  ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight, Loader2, AlertCircle
 } from "lucide-react";
-import { 
-  BUFFER_EXPOSURE_STATS, 
-  GENUINE_RF_METRICS 
-} from "../data/placeholderData";
-import componentsData from "../data/components_data.json";
 import { 
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, 
   CartesianGrid, Legend 
 } from "recharts";
+import api from "../services/api";
 
 export default function ProximityAnalysisPage({ selectedYear, setSelectedYear }) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const [activeBufferRadius, setActiveBufferRadius] = useState(500);
   const [componentFilter, setComponentFilter] = useState("all");
   const [sortField, setSortField] = useState("dist_water_m");
@@ -24,12 +24,32 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 15;
 
-  // Find genuine statistics for selected year
-  const currentProximity = GENUINE_RF_METRICS.find((d) => d.year === selectedYear) || GENUINE_RF_METRICS[5];
-  const currentBufferStats = BUFFER_EXPOSURE_STATS.find((d) => d.year === selectedYear) || BUFFER_EXPOSURE_STATS[5];
+  useEffect(() => {
+    let isMounted = true;
+    setLoading(true);
+    setError(null);
 
-  // Component rows for the selected year (all records from CSV)
-  const rawComponents = componentsData[selectedYear] || [];
+    api.getProximity(selectedYear)
+      .then((res) => {
+        if (isMounted) {
+          setData(res);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          console.error("Proximity API error:", err);
+          setError(err.message);
+          setLoading(false);
+        }
+      });
+
+    return () => { isMounted = false; };
+  }, [selectedYear]);
+
+  const summary = data?.summary || {};
+  const rawComponents = data?.components || [];
+  const bufferExposureRows = data?.buffer_exposure || [];
 
   // Filter components
   const filteredComponents = rawComponents.filter((comp) => {
@@ -71,398 +91,294 @@ export default function ProximityAnalysisPage({ selectedYear, setSelectedYear })
     setCurrentPage(1);
   };
 
-  // Prepare Buffer Exposure Chart Data for all 6 years
-  const bufferTrendData = BUFFER_EXPOSURE_STATS.map((b) => ({
-    year: b.year.toString(),
-    b250_settlement: b.b250.settlementPct,
-    b500_settlement: b.b500.settlementPct,
-    b1000_settlement: b.b1000.settlementPct,
-    b250_water: b.b250.waterPct,
-    b500_water: b.b500.waterPct,
-    b1000_water: b.b1000.waterPct,
-    b250_forest: b.b250.forestPct,
-    b500_forest: b.b500.forestPct,
-    b1000_forest: b.b1000.forestPct,
+  // Buffer Exposure Data for Selected Year
+  const bufferChartData = bufferExposureRows.map((row) => ({
+    radius: `${row.buffer_radius_m}m`,
+    settlementPct: row.settlement_exposure_pct,
+    forestPct: row.forest_exposure_pct,
+    waterPct: row.water_exposure_pct
   }));
 
-  const activeBufferKey = `b${activeBufferRadius}`;
-  const currentSelectedBuffer = currentBufferStats[activeBufferKey] || currentBufferStats.b500;
+  const b500 = bufferExposureRows.find((b) => b.buffer_radius_m === 500) || {};
 
   return (
     <div className="space-y-6">
-      {/* Top Header */}
+      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-slate-200">
         <div>
-          <h2 className="text-xl font-bold text-slate-900 tracking-tight">Environmental Proximity &amp; Buffer Exposure</h2>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Boundary-to-boundary distance calculations and 250m / 500m / 1000m radial buffer exposure
+          <h2 className="text-xl font-bold text-slate-900 tracking-tight">Environmental Proximity &amp; Buffer Impact Analysis</h2>
+          <p className="text-xs text-slate-500 mt-0.5 flex items-center gap-2">
+            <span>Euclidean Boundary Setbacks &bull; 250m, 500m &amp; 1000m Radial Exposure Zones &bull; UTM 43N</span>
+            {loading && <Loader2 className="w-3.5 h-3.5 animate-spin text-teal-600 inline" />}
           </p>
         </div>
-        <div className="flex items-center gap-3">
+
+        {/* Action Controls */}
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            onClick={() => setShowGisMapModal(true)}
+            className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+          >
+            <ImageIcon className="w-3.5 h-3.5 text-teal-600" /> View {selectedYear} GIS Plate
+          </button>
+
           <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-500">Epoch:</span>
+            <span className="text-xs text-slate-500 font-medium">Year:</span>
             <select
               value={selectedYear}
               onChange={(e) => handleYearChange(Number(e.target.value))}
-              className="text-xs bg-white border border-slate-200 rounded-md px-3 py-1.5 font-medium text-slate-800 shadow-2xs cursor-pointer"
+              className="text-xs bg-white border border-slate-200 rounded-md px-3 py-1.5 font-semibold text-slate-800 shadow-2xs cursor-pointer"
             >
               {[2021, 2022, 2023, 2024, 2025, 2026].map((yr) => (
-                <option key={yr} value={yr}>{yr}</option>
+                <option key={yr} value={yr}>{yr} Proximity</option>
               ))}
             </select>
           </div>
-          <button
-            onClick={() => setShowGisMapModal(true)}
-            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-teal-50 border border-teal-200 text-teal-700 hover:bg-teal-100 transition-colors cursor-pointer"
-          >
-            <ImageIcon className="w-3.5 h-3.5" /> View GIS Plate ({selectedYear})
-          </button>
         </div>
       </div>
 
-      {/* Spatial Proximity Distance Metrics Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {/* Water */}
-        <div className="bg-white border-l-4 border-l-[#2980B9] border border-slate-200 rounded-xl p-4 shadow-xs">
-          <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold text-slate-500 uppercase">Spatial Proximity to Water</p>
+      {error && (
+        <div className="p-3 bg-rose-50 border border-rose-200 rounded-lg flex items-center gap-2 text-rose-700 text-xs">
+          <AlertCircle className="w-4 h-4 shrink-0" />
+          <span>Failed to load Proximity API data: {error}</span>
+        </div>
+      )}
+
+      {/* Proximity Summary Banner Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Distance to Water */}
+        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-semibold uppercase">Water Bodies</span>
             <Droplets className="w-4 h-4 text-sky-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentProximity.waterDistMedian.toFixed(1)}</span>
+            <span className="text-2xl font-bold text-slate-900">{summary.dist_water_median_m?.toFixed(0) ?? 0}</span>
             <span className="text-xs font-medium text-slate-500">m median</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-1">
-            Mean separation: <strong className="text-slate-700">{currentProximity.waterDistMean.toFixed(1)} m</strong> across {rawComponents.length} pit components
+            Mean: {summary.dist_water_mean_m?.toFixed(0) ?? 0} m | Min: {summary.dist_water_min_m?.toFixed(0) ?? 0} m
           </p>
         </div>
 
-        {/* Forest */}
-        <div className="bg-white border-l-4 border-l-[#27AE60] border border-slate-200 rounded-xl p-4 shadow-xs">
-          <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold text-slate-500 uppercase">Spatial Proximity to Forest</p>
-            <Trees className="w-4 h-4 text-emerald-600" />
-          </div>
-          <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentProximity.forestDistMedian.toFixed(1)}</span>
-            <span className="text-xs font-medium text-slate-500">m median</span>
-          </div>
-          <p className="text-[11px] text-slate-500 mt-1">
-            Mean separation: <strong className="text-slate-700">{currentProximity.forestDistMean.toFixed(1)} m</strong> (perimeter boundary contact)
-          </p>
-        </div>
-
-        {/* Settlement */}
-        <div className="bg-white border-l-4 border-l-[#F39C12] border border-slate-200 rounded-xl p-4 shadow-xs">
-          <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold text-slate-500 uppercase">Spatial Proximity to Settlement</p>
+        {/* Distance to Settlement */}
+        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-semibold uppercase">Settlements</span>
             <Home className="w-4 h-4 text-amber-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentProximity.settlementDistMedian.toFixed(1)}</span>
+            <span className="text-2xl font-bold text-slate-900">{summary.dist_settlement_median_m?.toFixed(0) ?? 0}</span>
             <span className="text-xs font-medium text-slate-500">m median</span>
           </div>
           <p className="text-[11px] text-slate-500 mt-1">
-            Mean separation: <strong className="text-slate-700">{currentProximity.settlementDistMean.toFixed(1)} m</strong> adjacent to built settlements
+            Mean: {summary.dist_settlement_mean_m?.toFixed(1) ?? 0} m | Min: {summary.dist_settlement_min_m?.toFixed(0) ?? 0} m
+          </p>
+        </div>
+
+        {/* Distance to Forest */}
+        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-semibold uppercase">Forest / Greenery</span>
+            <Trees className="w-4 h-4 text-emerald-600" />
+          </div>
+          <div className="flex items-baseline gap-1 mt-1.5">
+            <span className="text-2xl font-bold text-slate-900">{summary.dist_forest_median_m?.toFixed(0) ?? 0}</span>
+            <span className="text-xs font-medium text-slate-500">m median</span>
+          </div>
+          <p className="text-[11px] text-slate-500 mt-1">
+            Mean: {summary.dist_forest_mean_m?.toFixed(1) ?? 0} m | Min: {summary.dist_forest_min_m?.toFixed(0) ?? 0} m
+          </p>
+        </div>
+
+        {/* 500m Buffer Blast/Dust Impact */}
+        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
+          <div className="flex items-center justify-between text-xs text-slate-500">
+            <span className="font-semibold uppercase">500m Buffer Impact</span>
+            <ShieldAlert className="w-4 h-4 text-purple-600" />
+          </div>
+          <div className="flex items-baseline gap-1 mt-1.5">
+            <span className="text-2xl font-bold text-slate-900">{b500.settlement_exposed_ha?.toFixed(1) ?? 0}</span>
+            <span className="text-xs font-medium text-slate-500">ha</span>
+          </div>
+          <p className="text-[11px] text-slate-500 mt-1">
+            {b500.settlement_exposure_pct?.toFixed(1) ?? 0}% settlement &bull; {b500.forest_exposure_pct?.toFixed(1) ?? 0}% forest
           </p>
         </div>
       </div>
 
-      {/* Main Spatial Map with Buffer Overlay Controls */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <div className="lg:col-span-8">
-          <InteractiveMap 
-            height="520px" 
-            activeYear={selectedYear} 
-            showBufferControls={true} 
-            showAoiBoundary={true}
+      {/* Main Map + Right Buffer Analysis Chart */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <InteractiveMap
+            height="520px"
+            activeYear={selectedYear}
+            showBufferControls={true}
             externalBufferRadius={activeBufferRadius}
             onBufferChange={setActiveBufferRadius}
+            showAoiBoundary={true}
+            bufferLayerData={data?.buffer_geojson}
           />
         </div>
 
-        {/* Right Buffer Exposure Details */}
-        <div className="lg:col-span-4 space-y-4">
+        <div className="space-y-4">
+          {/* Buffer Radius Selector */}
           <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
-            <h3 className="text-xs font-semibold text-slate-900 uppercase tracking-wide mb-3 flex items-center gap-1.5">
-              <ShieldAlert className="w-4 h-4 text-teal-600" /> Radial Buffer Exposure ({selectedYear})
+            <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+              <ShieldAlert className="w-4 h-4 text-purple-600" /> Radial Buffer Exposure ({selectedYear})
             </h3>
+            <p className="text-[11px] text-slate-500 mb-3">
+              Percentage of regional class areas engulfed inside the mine impact buffer
+            </p>
 
-            {/* Buffer Selector Tabs */}
-            <div className="flex gap-1.5 p-1 bg-slate-100 rounded-lg mb-4">
-              {[250, 500, 1000].map((radius) => (
-                <button
-                  key={radius}
-                  onClick={() => setActiveBufferRadius(radius)}
-                  className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-colors cursor-pointer ${
-                    activeBufferRadius === radius
-                      ? "bg-white text-slate-900 shadow-xs"
-                      : "text-slate-500 hover:text-slate-800"
-                  }`}
-                >
-                  {radius}m Buffer
-                </button>
-              ))}
+            <div className="h-44 w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={bufferChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" />
+                  <XAxis dataKey="radius" tick={{ fontSize: 10 }} />
+                  <YAxis tick={{ fontSize: 10 }} unit="%" />
+                  <Tooltip formatter={(val) => [`${val.toFixed(1)}%`, "Exposed"]} />
+                  <Bar dataKey="settlementPct" name="Settlement %" fill="#F39C12" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="forestPct" name="Forest %" fill="#27AE60" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="waterPct" name="Water %" fill="#2980B9" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
 
-            {/* Exposure Metrics for Selected Buffer */}
-            <div className="space-y-3">
-              <div className="p-3 rounded-lg bg-slate-50 border border-slate-100">
-                <div className="flex justify-between items-center text-xs mb-1">
-                  <span className="font-medium text-slate-700">Settlement in Buffer:</span>
-                  <span className="font-bold text-amber-600">
-                    {currentSelectedBuffer.settlementPct}%
-                  </span>
-                </div>
-                <div className="w-full bg-slate-200 rounded-full h-1.5">
-                  <div
-                    className="bg-amber-500 h-1.5 rounded-full"
-                    style={{
-                      width: `${currentSelectedBuffer.settlementPct}%`
-                    }}
-                  ></div>
-                </div>
-                <p className="text-[10px] text-slate-400 mt-1">Area exposed: {currentSelectedBuffer.settlementHa} ha</p>
-              </div>
-
-              <div className="p-3 rounded-lg bg-slate-50 border border-slate-100">
-                <div className="flex justify-between items-center text-xs mb-1">
-                  <span className="font-medium text-slate-700">Water in Buffer:</span>
-                  <span className="font-bold text-sky-600">
-                    {currentSelectedBuffer.waterPct}%
-                  </span>
-                </div>
-                <div className="w-full bg-slate-200 rounded-full h-1.5">
-                  <div
-                    className="bg-sky-500 h-1.5 rounded-full"
-                    style={{
-                      width: `${currentSelectedBuffer.waterPct}%`
-                    }}
-                  ></div>
-                </div>
-                <p className="text-[10px] text-slate-400 mt-1">Area exposed: {currentSelectedBuffer.waterHa} ha</p>
-              </div>
-
-              <div className="p-3 rounded-lg bg-slate-50 border border-slate-100">
-                <div className="flex justify-between items-center text-xs mb-1">
-                  <span className="font-medium text-slate-700">Forest in Buffer:</span>
-                  <span className="font-bold text-emerald-600">
-                    {currentSelectedBuffer.forestPct}%
-                  </span>
-                </div>
-                <div className="w-full bg-slate-200 rounded-full h-1.5">
-                  <div
-                    className="bg-emerald-500 h-1.5 rounded-full"
-                    style={{
-                      width: `${currentSelectedBuffer.forestPct}%`
-                    }}
-                  ></div>
-                </div>
-                <p className="text-[10px] text-slate-400 mt-1">Area exposed: {currentSelectedBuffer.forestHa} ha</p>
-              </div>
+            <div className="grid grid-cols-3 gap-1 mt-3 pt-3 border-t border-slate-100 text-center text-[10px] font-semibold text-slate-600">
+              <div className="text-amber-700">Settlement</div>
+              <div className="text-emerald-700">Forest</div>
+              <div className="text-sky-700">Water</div>
             </div>
+          </div>
 
-            <div className="mt-4 p-2.5 rounded-lg bg-teal-50/60 border border-teal-100 text-[11px] text-teal-800">
-              <p className="font-medium">Methodology &amp; Terminology:</p>
-              <p className="text-[10px] text-teal-700 mt-0.5 leading-normal">
-                Values reflect <strong>spatial buffer exposure</strong> calculated using metric Euclidean buffers in <strong>EPSG:32643</strong> around active mine components. Buffer intersection indicates geographic proximity, not direct physical impact.
-              </p>
+          {/* Buffer Parameters Legend */}
+          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs text-xs space-y-2">
+            <div className="flex justify-between pb-1 border-b border-slate-100">
+              <span className="text-slate-500">Active Buffer:</span>
+              <span className="font-semibold text-purple-700">{activeBufferRadius} m radius</span>
+            </div>
+            <div className="flex justify-between pb-1 border-b border-slate-100">
+              <span className="text-slate-500">Mine Components:</span>
+              <span className="font-semibold text-slate-900">{data?.component_count ?? 0} polygons</span>
+            </div>
+            <div className="flex justify-between pb-1 border-b border-slate-100">
+              <span className="text-slate-500">Mine Footprint:</span>
+              <span className="font-semibold text-slate-900">{summary.mine_bare_total_ha?.toFixed(2) ?? 0} ha</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-slate-500">Study Extent:</span>
+              <span className="font-mono text-slate-900 text-[11px]">{summary.total_aoi_ha?.toFixed(2) ?? 7955.83} ha</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Buffer Exposure Chart */}
-      <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-4 border-b border-slate-100 gap-2">
-          <div>
-            <h3 className="text-sm font-bold text-slate-900">Multi-Temporal Buffer Exposure Trends (2021–2026)</h3>
-            <p className="text-xs text-slate-500">Environmental land-cover exposure across 250m, 500m, and 1000m buffer zones</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400">Target buffer:</span>
-            <div className="inline-flex rounded-md shadow-2xs">
-              {[250, 500, 1000].map((r) => (
-                <button
-                  key={r}
-                  onClick={() => setActiveBufferRadius(r)}
-                  className={`px-2.5 py-1 text-xs font-medium border first:rounded-l-md last:rounded-r-md cursor-pointer ${
-                    activeBufferRadius === r
-                      ? "bg-teal-600 text-white border-teal-600"
-                      : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
-                  }`}
-                >
-                  {r}m
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="h-64 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={bufferTrendData} margin={{ top: 10, right: 20, left: -10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
-              <XAxis dataKey="year" tick={{ fontSize: 11, fill: "#64748B" }} tickLine={false} />
-              <YAxis unit="%" tick={{ fontSize: 11, fill: "#64748B" }} tickLine={false} domain={[0, 100]} />
-              <Tooltip 
-                contentStyle={{ borderRadius: '8px', fontSize: '11px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                formatter={(val) => [`${val}%`, '']}
-              />
-              <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '8px' }} />
-              <Bar 
-                dataKey={`b${activeBufferRadius}_settlement`} 
-                name={`Settlement Exposure (${activeBufferRadius}m)`} 
-                fill="#F39C12" 
-                radius={[4, 4, 0, 0]} 
-              />
-              <Bar 
-                dataKey={`b${activeBufferRadius}_water`} 
-                name={`Water Body Exposure (${activeBufferRadius}m)`} 
-                fill="#2980B9" 
-                radius={[4, 4, 0, 0]} 
-              />
-              <Bar 
-                dataKey={`b${activeBufferRadius}_forest`} 
-                name={`Forest Canopy Exposure (${activeBufferRadius}m)`} 
-                fill="#27AE60" 
-                radius={[4, 4, 0, 0]} 
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-
-      {/* Component-Level Proximity Table */}
+      {/* Component-Level Raw CSV Table from Backend */}
       <div className="bg-white border border-slate-200 rounded-xl shadow-xs overflow-hidden">
-        <div className="p-4 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div className="p-4 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h3 className="text-sm font-bold text-slate-900">
-              Component-Level Spatial Proximity Table ({selectedYear})
+              Contiguous Mining Components &bull; Epoch {selectedYear} ({totalRecords} records)
             </h3>
-            <p className="text-xs text-slate-500">
-              Contiguous mine pit components extracted from clean vector outputs &bull; Showing {paginatedComponents.length} of {totalRecords} records (Total in year: {rawComponents.length})
-            </p>
           </div>
+
+          {/* Quick Category Filter */}
           <div className="flex items-center gap-2">
             <Filter className="w-3.5 h-3.5 text-slate-400" />
             <select
               value={componentFilter}
               onChange={(e) => handleFilterChange(e.target.value)}
-              className="text-xs bg-slate-50 border border-slate-200 rounded-md px-2.5 py-1 text-slate-700 font-medium"
+              className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 text-slate-700 font-medium"
             >
-              <option value="all">All Pit Components ({rawComponents.length})</option>
-              <option value="immediate">High Proximity: Water &le; 100m</option>
-              <option value="medium">Medium Proximity: Water 101–300m</option>
-              <option value="safe">Low Proximity: Water &gt; 300m</option>
+              <option value="all">All Setback Distances</option>
+              <option value="immediate">&le; 100m to Water (High Risk)</option>
+              <option value="medium">100m - 300m to Water (Moderate)</option>
+              <option value="safe">&gt; 300m to Water (Low)</option>
             </select>
           </div>
         </div>
 
+        {/* Table */}
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50/80 text-slate-600 border-b border-slate-100 font-semibold">
+            <thead className="bg-slate-50/80 text-slate-600 font-semibold border-b border-slate-100">
               <tr>
-                <th className="py-2.5 px-4 cursor-pointer select-none" onClick={() => handleSort("component_id")}>
-                  <div className="flex items-center gap-1">
-                    Component ID <ArrowUpDown className="w-3 h-3 text-slate-400" />
-                  </div>
+                <th className="py-2.5 px-4">Component ID</th>
+                <th 
+                  onClick={() => handleSort("area_ha")}
+                  className="py-2.5 px-4 text-right cursor-pointer hover:bg-slate-100"
+                >
+                  Area (ha) <ArrowUpDown className="w-3 h-3 inline ml-0.5 text-slate-400" />
                 </th>
-                <th className="py-2.5 px-4 cursor-pointer select-none" onClick={() => handleSort("area_ha")}>
-                  <div className="flex items-center gap-1">
-                    Pit Area (ha) <ArrowUpDown className="w-3 h-3 text-slate-400" />
-                  </div>
+                <th 
+                  onClick={() => handleSort("dist_water_m")}
+                  className="py-2.5 px-4 text-right cursor-pointer hover:bg-slate-100"
+                >
+                  Dist to Water (m) <ArrowUpDown className="w-3 h-3 inline ml-0.5 text-slate-400" />
                 </th>
-                <th className="py-2.5 px-4 cursor-pointer select-none" onClick={() => handleSort("dist_water_m")}>
-                  <div className="flex items-center gap-1">
-                    Dist to Water (m) <ArrowUpDown className="w-3 h-3 text-slate-400" />
-                  </div>
+                <th 
+                  onClick={() => handleSort("dist_settlement_m")}
+                  className="py-2.5 px-4 text-right cursor-pointer hover:bg-slate-100"
+                >
+                  Dist to Settlement (m) <ArrowUpDown className="w-3 h-3 inline ml-0.5 text-slate-400" />
                 </th>
-                <th className="py-2.5 px-4 cursor-pointer select-none" onClick={() => handleSort("dist_forest_m")}>
-                  <div className="flex items-center gap-1">
-                    Dist to Forest (m) <ArrowUpDown className="w-3 h-3 text-slate-400" />
-                  </div>
+                <th 
+                  onClick={() => handleSort("dist_forest_m")}
+                  className="py-2.5 px-4 text-right cursor-pointer hover:bg-slate-100"
+                >
+                  Dist to Forest (m) <ArrowUpDown className="w-3 h-3 inline ml-0.5 text-slate-400" />
                 </th>
-                <th className="py-2.5 px-4 cursor-pointer select-none" onClick={() => handleSort("dist_settlement_m")}>
-                  <div className="flex items-center gap-1">
-                    Dist to Settlement (m) <ArrowUpDown className="w-3 h-3 text-slate-400" />
-                  </div>
-                </th>
-                <th className="py-2.5 px-4 text-center">Proximity Category</th>
+                <th className="py-2.5 px-4 text-center">Category</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 font-mono text-[11px] text-slate-700">
-              {paginatedComponents.map((comp) => {
-                const isWaterClose = comp.dist_water_m <= 100;
-                return (
-                  <tr key={comp.component_id} className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-2 px-4 font-semibold text-slate-900 font-sans">
-                      {comp.component_id}
-                    </td>
-                    <td className="py-2 px-4">
-                      {comp.area_ha.toFixed(2)}
-                    </td>
-                    <td className={`py-2 px-4 font-semibold ${isWaterClose ? "text-rose-600 bg-rose-50/50" : "text-sky-700"}`}>
-                      {comp.dist_water_m.toFixed(1)} m
-                    </td>
-                    <td className="py-2 px-4 text-emerald-700">
-                      {comp.dist_forest_m.toFixed(1)} m
-                    </td>
-                    <td className="py-2 px-4 text-amber-700">
-                      {comp.dist_settlement_m.toFixed(1)} m
-                    </td>
-                    <td className="py-2 px-4 text-center font-sans">
-                      {isWaterClose ? (
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-100 text-rose-700">
-                          Immediate Adjacency
-                        </span>
-                      ) : comp.dist_water_m <= 300 ? (
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-100 text-amber-700">
-                          Moderate Setback
-                        </span>
-                      ) : (
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-700">
-                          Low Proximity
-                        </span>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-              {paginatedComponents.length === 0 && (
-                <tr>
-                  <td colSpan={6} className="py-6 text-center text-slate-400 font-sans text-xs">
-                    No components match the selected proximity filter.
+              {paginatedComponents.map((row) => (
+                <tr key={row.component_id} className="hover:bg-slate-50/80 transition-colors">
+                  <td className="py-2 px-4 font-semibold text-slate-900 font-sans">{row.component_id}</td>
+                  <td className="py-2 px-4 text-right">{Number(row.area_ha).toFixed(2)}</td>
+                  <td className="py-2 px-4 text-right">
+                    <span className={row.dist_water_m <= 100 ? "text-rose-600 font-bold" : "text-slate-800"}>
+                      {Number(row.dist_water_m).toFixed(1)}
+                    </span>
+                  </td>
+                  <td className="py-2 px-4 text-right">
+                    <span className={row.dist_settlement_m === 0 ? "text-amber-600 font-bold" : "text-slate-800"}>
+                      {Number(row.dist_settlement_m).toFixed(1)}
+                    </span>
+                  </td>
+                  <td className="py-2 px-4 text-right">{Number(row.dist_forest_m).toFixed(1)}</td>
+                  <td className="py-2 px-4 text-center font-sans">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-50 text-rose-700 border border-rose-200">
+                      {row.category}
+                    </span>
                   </td>
                 </tr>
-              )}
+              ))}
             </tbody>
           </table>
         </div>
 
         {/* Pagination Bar */}
-        <div className="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+        <div className="p-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
           <div>
-            Showing <span className="font-semibold">{Math.min((safePage - 1) * pageSize + 1, totalRecords)}</span> to{" "}
-            <span className="font-semibold">{Math.min(safePage * pageSize, totalRecords)}</span> of{" "}
-            <span className="font-semibold">{totalRecords}</span> filtered items
+            Showing {(safePage - 1) * pageSize + 1} to {Math.min(safePage * pageSize, totalRecords)} of {totalRecords} entries
           </div>
           <div className="flex items-center gap-1">
             <button
-              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={safePage === 1}
-              className="p-1.5 rounded border border-slate-200 bg-white disabled:opacity-40 hover:bg-slate-100 transition-colors cursor-pointer disabled:cursor-not-allowed"
+              className="p-1 rounded hover:bg-slate-100 disabled:opacity-40 cursor-pointer"
             >
-              <ChevronLeft className="w-3.5 h-3.5" />
+              <ChevronLeft className="w-4 h-4" />
             </button>
-            <span className="px-2 text-slate-500">
-              Page {safePage} of {totalPages}
-            </span>
+            <span className="px-2 font-medium">Page {safePage} of {totalPages}</span>
             <button
-              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
               disabled={safePage === totalPages}
-              className="p-1.5 rounded border border-slate-200 bg-white disabled:opacity-40 hover:bg-slate-100 transition-colors cursor-pointer disabled:cursor-not-allowed"
+              className="p-1 rounded hover:bg-slate-100 disabled:opacity-40 cursor-pointer"
             >
-              <ChevronRight className="w-3.5 h-3.5" />
+              <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         </div>

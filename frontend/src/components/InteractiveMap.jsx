@@ -14,7 +14,9 @@ export default function InteractiveMap({
   externalBufferRadius = null,
   onBufferChange = null,
   activeClassFilter = { mine: true, settlement: true, forest: true, water: true },
-  onSelectFeature = null
+  onSelectFeature = null,
+  geojsonData = null,
+  bufferLayerData = null
 }) {
   const [baseLayer, setBaseLayer] = useState("satellite"); // 'satellite' | 'streets'
   const [internalBufferRadius, setInternalBufferRadius] = useState(500);
@@ -29,7 +31,7 @@ export default function InteractiveMap({
     }
   };
 
-  // Extract actual polygons for active year
+  // Extract actual polygons for active year (fallback when geojsonData is not supplied)
   const yearPolygons = actualPolygonsData[activeYear] || actualPolygonsData[2021] || [];
 
   const getStyleForFeature = (feature) => {
@@ -50,6 +52,74 @@ export default function InteractiveMap({
     };
   };
 
+  const getStyleForGeoJsonFeature = (feature) => {
+    const props = feature?.properties || {};
+    const classId = props.class_id;
+    const className = (props.class_name || "").toLowerCase();
+    const defaultColor = props.fill_color;
+
+    // Handle binary mining segmentation (e.g. U-Net masks or mining polygons without RF class properties)
+    const isMining = showUnetOverlay || classId === 0 || className.includes("mine") || props.component_id;
+    if (isMining && (showUnetOverlay || !defaultColor)) {
+      const fillColor = showUnetOverlay ? COLOR_PALETTE.unetMask : COLOR_PALETTE.mine;
+      return {
+        color: fillColor,
+        fillColor: fillColor,
+        fillOpacity: showUnetOverlay ? 0.8 : 0.7,
+        weight: 1.5
+      };
+    }
+
+    // Environmental feature classification matching (e.g., water, forest, settlement)
+    if (defaultColor) {
+      return {
+        color: defaultColor,
+        fillColor: defaultColor,
+        fillOpacity: classId === 3 || className.includes("water") ? 0.75 : 0.65,
+        weight: 1.5
+      };
+    }
+
+    if (classId === 3 || className.includes("water")) {
+      return { color: COLOR_PALETTE.water, fillColor: COLOR_PALETTE.water, fillOpacity: 0.75, weight: 1.5 };
+    }
+    if (classId === 2 || className.includes("forest") || className.includes("veg")) {
+      return { color: COLOR_PALETTE.forest, fillColor: COLOR_PALETTE.forest, fillOpacity: 0.65, weight: 1.5 };
+    }
+    if (classId === 1 || className.includes("settle")) {
+      return { color: COLOR_PALETTE.settlement, fillColor: COLOR_PALETTE.settlement, fillOpacity: 0.65, weight: 1.5 };
+    }
+
+    return {
+      color: "#64748B",
+      fillColor: "#64748B",
+      fillOpacity: 0.6,
+      weight: 1.5
+    };
+  };
+
+  const filterGeoJsonFeature = (feature) => {
+    const props = feature?.properties || {};
+    const classId = props.class_id;
+    const className = (props.class_name || "").toLowerCase();
+
+    // If activeClassFilter is disabled or all true, allow all
+    if (!activeClassFilter) return true;
+
+    // If it's a binary mining layer (U-Net or mine components GeoJSON)
+    if (classId === undefined && !className) {
+      // Unspecified features default to mine visibility
+      return activeClassFilter.mine ?? true;
+    }
+
+    if ((classId === 0 || className.includes("mine") || props.component_id) && !activeClassFilter.mine) return false;
+    if ((classId === 1 || className.includes("settle")) && !activeClassFilter.settlement) return false;
+    if ((classId === 2 || className.includes("forest") || className.includes("veg")) && !activeClassFilter.forest) return false;
+    if ((classId === 3 || className.includes("water")) && !activeClassFilter.water) return false;
+
+    return true;
+  };
+
   return (
     <div className="relative rounded-xl border border-slate-200 overflow-hidden shadow-xs bg-slate-100 flex flex-col">
       {/* Top Map Header / Quick Controls */}
@@ -59,9 +129,9 @@ export default function InteractiveMap({
           <h3 className="text-xs font-semibold text-slate-800">
             Zawar Interactive Map Viewer <span className="text-slate-400 font-normal">({activeYear})</span>
           </h3>
-          <span className="text-[10px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 font-mono">
+          {/* <span className="text-[10px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 font-mono">
             EPSG:4326 Display / EPSG:32643 Projected
-          </span>
+          </span> */}
         </div>
 
         {/* Layer & Basemap Toggles */}
@@ -129,6 +199,39 @@ export default function InteractiveMap({
 
           <ScaleControl position="bottomleft" metric={true} imperial={false} />
 
+          {/* Polygon Buffer Zones — rendered BELOW mining polygons */}
+          {showBufferControls && bufferLayerData && (() => {
+            const feat = bufferLayerData.features && bufferLayerData.features.find(
+              (f) => f.properties && f.properties.buffer_m === activeBuffer
+            );
+            if (!feat) return null;
+            const fc = { type: "FeatureCollection", features: [feat] };
+            return (
+              <GeoJSON
+                key={`buffer-polygon-${activeBuffer}-${activeYear}`}
+                data={fc}
+                style={() => ({
+                  color: feat.properties.color || "#9B59B6",
+                  fillColor: feat.properties.fillColor || "#9B59B6",
+                  fillOpacity: feat.properties.fillOpacity != null ? feat.properties.fillOpacity : 0.07,
+                  weight: feat.properties.weight != null ? feat.properties.weight : 1.8,
+                  dashArray: feat.properties.dashArray || "8, 5",
+                  opacity: feat.properties.opacity != null ? feat.properties.opacity : 0.8,
+                })}
+              >
+                <Popup>
+                  <div className="p-1 font-sans text-xs">
+                    <p className="font-bold text-slate-900">{feat.properties.label}</p>
+                    <p className="text-slate-500 text-[10px]">Year: {feat.properties.year}</p>
+                    <div className="mt-1 text-slate-700">
+                      Area: <span className="font-semibold">{feat.properties.area_ha && feat.properties.area_ha.toFixed(1)} ha</span>
+                    </div>
+                  </div>
+                </Popup>
+              </GeoJSON>
+            );
+          })()}
+
           {/* Actual Study AOI Boundary (data/zawar/aoi.geojson) */}
           {displayAoi && (
             <GeoJSON
@@ -154,8 +257,59 @@ export default function InteractiveMap({
             </GeoJSON>
           )}
 
-          {/* Render Actual Extracted Component Polygons */}
-          {yearPolygons.map((poly) => {
+          {/* Render Backend GeoJSON Layer when provided */}
+          {geojsonData && (
+            <GeoJSON
+              key={`backend-geojson-${activeYear}-${showUnetOverlay}-${JSON.stringify(activeClassFilter)}`}
+              data={geojsonData}
+              style={getStyleForGeoJsonFeature}
+              filter={filterGeoJsonFeature}
+              onEachFeature={(feature, layer) => {
+                const props = feature.properties || {};
+                const name = props.class_name || `Class ${props.class_id}`;
+                const area = props.area_ha != null ? `${Number(props.area_ha).toFixed(2)} ha` : "N/A";
+                const epoch = props.year || activeYear;
+
+                layer.bindPopup(`
+                  <div class="p-1 font-sans text-xs">
+                    <p class="font-bold text-slate-900">${name}</p>
+                    <p class="text-slate-500 text-[10px]">Class ID: ${props.class_id ?? "N/A"}</p>
+                    <div class="mt-2 space-y-1 text-slate-700">
+                      <div class="flex justify-between gap-4">
+                        <span>Area:</span>
+                        <span class="font-semibold text-slate-900">${area}</span>
+                      </div>
+                      <div class="flex justify-between gap-4">
+                        <span>CRS:</span>
+                        <span class="font-mono text-[10px]">EPSG:32643 / WGS84</span>
+                      </div>
+                      <div class="flex justify-between gap-4">
+                        <span>Epoch:</span>
+                        <span class="font-medium text-teal-600">${epoch}</span>
+                      </div>
+                    </div>
+                  </div>
+                `);
+
+                layer.on({
+                  click: () => {
+                    if (onSelectFeature) {
+                      onSelectFeature({
+                        id: `${name}_${epoch}`,
+                        class_id: props.class_id,
+                        class_name: name,
+                        area_ha: props.area_ha,
+                        geojson: feature.geometry
+                      });
+                    }
+                  }
+                });
+              }}
+            />
+          )}
+
+          {/* Render Extracted Component Polygons Fallback when geojsonData is not provided */}
+          {!geojsonData && yearPolygons.map((poly) => {
             const isWater = poly.class_id === 3;
             if (isWater && !activeClassFilter.water) return null;
             if (!isWater && !activeClassFilter.mine) return null;
@@ -169,7 +323,7 @@ export default function InteractiveMap({
             return (
               <React.Fragment key={poly.id}>
                 {/* Proximity Impact Buffers around major mine components */}
-                {showBufferControls && !isWater && (
+                {showBufferControls && !isWater && !bufferLayerData && (
                   <Circle
                     center={centerLatLon}
                     radius={activeBuffer}
@@ -249,9 +403,14 @@ export default function InteractiveMap({
               <span className="w-2.5 h-0.5 bg-teal-600 border-b border-dashed border-teal-600"></span> AOI Boundary
             </span>
           )}
+          {showBufferControls && (
+            <span className="flex items-center gap-1.5 text-amber-700 font-medium">
+              <span className="w-2 h-2 rounded-full border border-dashed border-amber-600"></span> {bufferLayerData ? `Polygon Buffer (${activeBuffer}m)` : `Mine Centroid Buffer (${activeBuffer}m)`}
+            </span>
+          )}
         </div>
         <div className="text-[11px] text-slate-400">
-          EPSG:4326 GeoJSON &bull; Verified against 10m Sentinel-2
+          {showBufferControls ? bufferLayerData ? "Dissolved polygon buffer • EPSG:4326 • Computed from RF Mine class" : "Centroid indicator • See GIS Plate for raster/polygon buffer" : "EPSG:4326 GeoJSON • Verified against 10m Sentinel-2"}
         </div>
       </div>
     </div>

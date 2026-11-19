@@ -36,7 +36,7 @@ export default function Sidebar({ activePage, setActivePage }) {
       <div className="px-4 py-3 mx-3 my-3 rounded-lg bg-slate-800/60 border border-slate-700/50">
         <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
           <span className="font-medium text-slate-300">Active AOI</span>
-          <span className="text-teal-400 font-mono text-[10px]">EPSG:32643</span>
+          {/* <span className="text-teal-400 font-mono text-[10px]">EPSG:32643</span> */}
         </div>
         <p className="text-xs font-medium text-slate-200 truncate">Zawar Mines, Udaipur</p>
         <p className="text-[10px] text-slate-400 mt-0.5">Sentinel-2 (10m Resolution)</p>

@@ -120,10 +120,66 @@ def compute_component_distances(mine_components: gpd.GeoDataFrame, settlement_gd
     return pd.DataFrame(records)
 
 
-def compute_buffer_exposure(mine_components: gpd.GeoDataFrame, settlement_gdf, forest_gdf, water_gdf, year: int) -> pd.DataFrame:
-    """Computes environmental land cover within 250m, 500m, and 1000m buffers around all Mine/Bare land."""
+def generate_buffer_geojson(mine_components: gpd.GeoDataFrame, full_gdf: gpd.GeoDataFrame, year: int, out_path: Path):
+    """Generates dissolved buffer polygons as a GeoJSON FeatureCollection (WGS84) for map display.
+    
+    Each buffer radius (250m, 500m, 1000m) becomes a single Feature clipped to the AOI.
+    The file is consumed by the backend API and rendered on the frontend map.
+    """
     union_mine = mine_components.geometry.union_all() if hasattr(mine_components.geometry, "union_all") else mine_components.geometry.unary_union
     union_mine = make_valid(union_mine)
+
+    aoi_geom = full_gdf.geometry.union_all() if hasattr(full_gdf.geometry, "union_all") else full_gdf.geometry.unary_union
+    aoi_geom = make_valid(aoi_geom)
+
+    buf_colors = {250: "#F39C12", 500: "#9B59B6", 1000: "#8E44AD"}
+    features = []
+
+    for buf_m in BUFFERS:
+        buf_geom = make_valid(union_mine.buffer(buf_m))
+        buf_clipped = make_valid(buf_geom.intersection(aoi_geom))
+        buf_area_ha = round(buf_clipped.area / 10000.0, 2)
+
+        # Convert to WGS84 for Leaflet
+        buf_gs = gpd.GeoSeries([buf_clipped], crs=CRS_METRIC).to_crs("EPSG:4326")
+        geom_wgs = buf_gs.iloc[0].__geo_interface__
+
+        features.append({
+            "type": "Feature",
+            "properties": {
+                "buffer_m": buf_m,
+                "year": year,
+                "area_ha": buf_area_ha,
+                "label": f"Dissolved Mine Buffer ({buf_m}m)",
+                "color": buf_colors.get(buf_m, "#9B59B6"),
+                "fillColor": buf_colors.get(buf_m, "#9B59B6"),
+                "fillOpacity": 0.08,
+                "weight": 1.8,
+                "dashArray": "8, 5",
+                "opacity": 0.8
+            },
+            "geometry": geom_wgs
+        })
+
+    fc = {"type": "FeatureCollection", "features": features}
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(fc, f)
+    log.info("Saved buffer GeoJSON -> %s", out_path)
+
+
+def compute_buffer_exposure(mine_components: gpd.GeoDataFrame, settlement_gdf, forest_gdf, water_gdf, full_gdf, year: int) -> pd.DataFrame:
+    """Computes environmental land cover within 250m, 500m, and 1000m buffers around all Mine/Bare land.
+    
+    Buffers are clipped to the AOI boundary (union of all classified polygons) so that
+    buffer area beyond the study region does not inflate exposure percentages.
+    """
+    union_mine = mine_components.geometry.union_all() if hasattr(mine_components.geometry, "union_all") else mine_components.geometry.unary_union
+    union_mine = make_valid(union_mine)
+
+    # AOI boundary = union of all four mutually-exclusive land-cover classes
+    aoi_geom = full_gdf.geometry.union_all() if hasattr(full_gdf.geometry, "union_all") else full_gdf.geometry.unary_union
+    aoi_geom = make_valid(aoi_geom)
 
     s_geom = settlement_gdf.geometry.iloc[0] if not settlement_gdf.empty else None
     f_geom = forest_gdf.geometry.iloc[0] if not forest_gdf.empty else None
@@ -136,6 +192,8 @@ def compute_buffer_exposure(mine_components: gpd.GeoDataFrame, settlement_gdf, f
     records = []
     for buf_m in BUFFERS:
         buf_geom = make_valid(union_mine.buffer(buf_m))
+        # Clip the buffer to the AOI so it does not extend beyond the study area
+        buf_geom = make_valid(buf_geom.intersection(aoi_geom))
         buf_area_ha = round(buf_geom.area / 10000.0, 2)
 
         s_exp_ha = round(s_geom.intersection(buf_geom).area / 10000.0, 2) if s_geom else 0.0
@@ -310,7 +368,7 @@ def main():
         dist_df.to_csv(dist_csv, index=False)
 
         # 2. Buffer Exposure
-        exp_df = compute_buffer_exposure(mine_components, settlement_gdf, forest_gdf, water_gdf, yr)
+        exp_df = compute_buffer_exposure(mine_components, settlement_gdf, forest_gdf, water_gdf, full_gdf, yr)
         exp_csv = BUFFERS_DIR / f"buffer_exposure_clean_{yr}.csv"
         exp_df.to_csv(exp_csv, index=False)
         all_buffers_list.append(exp_df)
@@ -324,6 +382,10 @@ def main():
         map_path = MAPS_DIR / f"clean_gis_map_{yr}.png"
         plot_gis_map(full_gdf, mine_components, yr, map_path)
         log.info("Saved GIS map -> %s", map_path)
+
+        # 5. Buffer GeoJSON for frontend map overlay
+        buf_geojson_path = BUFFERS_DIR / f"buffer_polygons_{yr}.geojson"
+        generate_buffer_geojson(mine_components, full_gdf, yr, buf_geojson_path)
 
         # Summary Metrics Row
         total_mine_bare_ha = full_gdf[full_gdf["class_id"] == 0]["area_ha"].sum()

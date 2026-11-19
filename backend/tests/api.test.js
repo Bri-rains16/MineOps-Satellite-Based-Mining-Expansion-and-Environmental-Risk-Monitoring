@@ -98,20 +98,20 @@ async function runTests() {
     const unet2021Res = await request(server, 'GET', '/api/unet/2021');
     assert.strictEqual(unet2021Res.status, 200);
     assert.strictEqual(unet2021Res.body.year, 2021);
-    assert.strictEqual(unet2021Res.body.model_status.type, 'prototype/calibrated');
-    assert.strictEqual(unet2021Res.body.model_status.is_genuine_inference, false);
+    assert.strictEqual(unet2021Res.body.model_status.type, 'fine-tuned/deep-learning');
+    assert.strictEqual(unet2021Res.body.model_status.is_genuine_inference, true);
     assert.strictEqual(unet2021Res.body.mask_metadata.filename, 'unet_pred_2021.tif');
     assert.strictEqual(unet2021Res.body.mask_metadata.available, true);
-    assert.strictEqual(unet2021Res.body.expansion_data.area_hectares, 99.32);
+    assert.strictEqual(unet2021Res.body.expansion_data.area_hectares, 94.38);
     console.log('✓ /api/unet/2021 passed');
 
     console.log('\n[TEST] 7. GET /api/unet/2026');
     const unet2026Res = await request(server, 'GET', '/api/unet/2026');
     assert.strictEqual(unet2026Res.status, 200);
     assert.strictEqual(unet2026Res.body.year, 2026);
-    assert.strictEqual(unet2026Res.body.model_status.is_genuine_inference, false);
-    assert.strictEqual(unet2026Res.body.expansion_data.area_hectares, 114.6);
-    assert.strictEqual(unet2026Res.body.expansion_data.expansion_ha, -10.13);
+    assert.strictEqual(unet2026Res.body.model_status.is_genuine_inference, true);
+    assert.strictEqual(unet2026Res.body.expansion_data.area_hectares, 117.51);
+    assert.strictEqual(unet2026Res.body.expansion_data.expansion_ha, -14.67);
     console.log('✓ /api/unet/2026 passed');
 
     // 8. Proximity endpoint (2021 & 2026)

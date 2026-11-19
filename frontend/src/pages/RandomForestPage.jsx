@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InteractiveMap from "../components/InteractiveMap";
-import { Trees, Filter, Layers, CheckCircle, AlertCircle, Info } from "lucide-react";
-import { GENUINE_RF_METRICS, SATELLITE_SPECIFICATIONS } from "../data/placeholderData";
+import { Filter, Layers, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { SATELLITE_SPECIFICATIONS } from "../data/placeholderData";
 import { 
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, 
-  CartesianGrid, Legend, LineChart, Line 
+  CartesianGrid, Legend 
 } from "recharts";
+import api from "../services/api";
 
 export default function RandomForestPage({ selectedYear, setSelectedYear }) {
-  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const [activeLayers, setActiveLayers] = useState({
     mine: true,
     settlement: true,
@@ -16,11 +20,47 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
     water: true
   });
 
-  const currentStats = GENUINE_RF_METRICS.find((d) => d.year === selectedYear) || GENUINE_RF_METRICS[0];
+  useEffect(() => {
+    let isMounted = true;
+    setLoading(true);
+    setError(null);
+
+    api.getRf(selectedYear)
+      .then((res) => {
+        if (isMounted) {
+          setData(res);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          console.error("RF API error:", err);
+          setError(err.message);
+          setLoading(false);
+        }
+      });
+
+    return () => { isMounted = false; };
+  }, [selectedYear]);
 
   const toggleLayer = (layerName) => {
     setActiveLayers((prev) => ({ ...prev, [layerName]: !prev[layerName] }));
   };
+
+  const totalAreaHa = data?.total_area_ha || 7955.83;
+  const classAreas = data?.class_areas || [];
+
+  const mineObj = classAreas.find((c) => c.class_id === 0) || { area_ha: 0 };
+  const settlementObj = classAreas.find((c) => c.class_id === 1) || { area_ha: 0 };
+  const forestObj = classAreas.find((c) => c.class_id === 2) || { area_ha: 0 };
+  const waterObj = classAreas.find((c) => c.class_id === 3) || { area_ha: 0 };
+
+  const barChartData = [
+    { name: "Mine/Bare", area_ha: mineObj.area_ha, fill: "#E74C3C" },
+    { name: "Settlement", area_ha: settlementObj.area_ha, fill: "#F39C12" },
+    { name: "Forest", area_ha: forestObj.area_ha, fill: "#27AE60" },
+    { name: "Water", area_ha: waterObj.area_ha, fill: "#2980B9" }
+  ];
 
   return (
     <div className="space-y-6">
@@ -28,14 +68,15 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-slate-200">
         <div>
           <h2 className="text-xl font-bold text-slate-900 tracking-tight">Random Forest Land-Cover Classification</h2>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Ojha et al. (2025) Stacked Mineral Ratios &bull; Mutually Exclusive Classes &bull; Zero Inter-Class Overlaps
+          <p className="text-xs text-slate-500 mt-0.5 flex items-center gap-2">
+            <span>Ojha et al. (2025) Stacked Mineral Ratios &bull; Mutually Exclusive Classes &bull; Zero Inter-Class Overlaps</span>
+            {loading && <Loader2 className="w-3.5 h-3.5 animate-spin text-teal-600 inline" />}
           </p>
         </div>
 
         {/* Year Selector */}
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-500 font-medium">Epoch:</span>
+          <span className="text-xs text-slate-500 font-medium">Year:</span>
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(Number(e.target.value))}
@@ -47,6 +88,13 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
           </select>
         </div>
       </div>
+
+      {error && (
+        <div className="p-3 bg-rose-50 border border-rose-200 rounded-lg flex items-center gap-2 text-rose-700 text-xs">
+          <AlertCircle className="w-4 h-4 shrink-0" />
+          <span>Failed to load RF API data: {error}</span>
+        </div>
+      )}
 
       {/* Layer Toggles & Class Statistics Banner */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -62,10 +110,10 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
             <input type="checkbox" checked={activeLayers.mine} readOnly className="w-3.5 h-3.5 rounded text-rose-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentStats.mineHa}</span>
+            <span className="text-2xl font-bold text-slate-900">{mineObj.area_ha.toFixed(2)}</span>
             <span className="text-xs font-medium text-slate-500">ha</span>
           </div>
-          <p className="text-[11px] text-slate-500 mt-1">{((currentStats.mineHa / currentStats.totalAreaHa) * 100).toFixed(1)}% AOI share</p>
+          <p className="text-[11px] text-slate-500 mt-1">{((mineObj.area_ha / totalAreaHa) * 100).toFixed(1)}% AOI share</p>
         </div>
 
         {/* Settlement */}
@@ -80,10 +128,10 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
             <input type="checkbox" checked={activeLayers.settlement} readOnly className="w-3.5 h-3.5 rounded text-amber-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentStats.settlementHa}</span>
+            <span className="text-2xl font-bold text-slate-900">{settlementObj.area_ha.toFixed(2)}</span>
             <span className="text-xs font-medium text-slate-500">ha</span>
           </div>
-          <p className="text-[11px] text-slate-500 mt-1">{((currentStats.settlementHa / currentStats.totalAreaHa) * 100).toFixed(1)}% AOI share</p>
+          <p className="text-[11px] text-slate-500 mt-1">{((settlementObj.area_ha / totalAreaHa) * 100).toFixed(1)}% AOI share</p>
         </div>
 
         {/* Forest */}
@@ -98,10 +146,10 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
             <input type="checkbox" checked={activeLayers.forest} readOnly className="w-3.5 h-3.5 rounded text-emerald-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentStats.forestHa}</span>
+            <span className="text-2xl font-bold text-slate-900">{forestObj.area_ha.toFixed(2)}</span>
             <span className="text-xs font-medium text-slate-500">ha</span>
           </div>
-          <p className="text-[11px] text-slate-500 mt-1">{((currentStats.forestHa / currentStats.totalAreaHa) * 100).toFixed(1)}% AOI share</p>
+          <p className="text-[11px] text-slate-500 mt-1">{((forestObj.area_ha / totalAreaHa) * 100).toFixed(1)}% AOI share</p>
         </div>
 
         {/* Water */}
@@ -116,74 +164,41 @@ export default function RandomForestPage({ selectedYear, setSelectedYear }) {
             <input type="checkbox" checked={activeLayers.water} readOnly className="w-3.5 h-3.5 rounded text-sky-600" />
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-2xl font-bold text-slate-900">{currentStats.waterHa}</span>
+            <span className="text-2xl font-bold text-slate-900">{waterObj.area_ha.toFixed(2)}</span>
             <span className="text-xs font-medium text-slate-500">ha</span>
           </div>
-          <p className="text-[11px] text-slate-500 mt-1">{((currentStats.waterHa / currentStats.totalAreaHa) * 100).toFixed(2)}% AOI share</p>
+          <p className="text-[11px] text-slate-500 mt-1">{((waterObj.area_ha / totalAreaHa) * 100).toFixed(1)}% AOI share</p>
         </div>
       </div>
 
-      {/* Main Map with Clickable Polygon Inspection */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <div className="lg:col-span-8">
+      {/* Main Map + Right Side Analysis */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
           <InteractiveMap
-            height="540px"
+            height="550px"
             activeYear={selectedYear}
             activeClassFilter={activeLayers}
-            onSelectFeature={(feat) => setSelectedFeature(feat)}
+            showAoiBoundary={true}
+            geojsonData={data?.geojson}
           />
         </div>
 
-        {/* Right Inspection & Temporal Dynamics Panel */}
-        <div className="lg:col-span-4 space-y-4">
-          {/* Feature Inspector */}
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
-            <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-2 flex items-center gap-1.5">
-              <Info className="w-4 h-4 text-teal-600" /> Feature Inspector
+        <div className="space-y-4">
+          {/* Area Breakdown Chart */}
+          <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs">
+            <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-2">
+              Class Breakdown (ha)
             </h3>
-            {selectedFeature ? (
-              <div className="space-y-2 text-xs bg-slate-50 p-3 rounded-lg border border-slate-100">
-                <div className="flex justify-between font-bold text-slate-900 border-b pb-1">
-                  <span>ID:</span>
-                  <span className="font-mono text-teal-700">{selectedFeature.id}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Class:</span>
-                  <span className="font-semibold text-slate-800">{selectedFeature.class_name}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Area:</span>
-                  <span className="font-bold text-slate-900">{selectedFeature.area_ha} ha</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Projection:</span>
-                  <span className="font-mono text-[10px] text-slate-600">EPSG:32643 (UTM 43N)</span>
-                </div>
-              </div>
-            ) : (
-              <p className="text-xs text-slate-500 italic p-3 bg-slate-50 rounded-lg">
-                Click any polygon on the map to inspect its component ID, exact area, and classification attributes.
-              </p>
-            )}
-          </div>
-
-          {/* Temporal Land-Cover Allocation Chart */}
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs">
-            <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-1">
-              Multi-Temporal Land-Cover Trends
-            </h3>
-            <p className="text-[11px] text-slate-500 mb-2">Area (ha) across all 6 epochs</p>
+            <p className="text-[11px] text-slate-500 mb-3">Live values from backend API</p>
             <div className="h-44 w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={GENUINE_RF_METRICS} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
+                <BarChart data={barChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" />
-                  <XAxis dataKey="year" tick={{ fontSize: 10 }} />
+                  <XAxis dataKey="name" tick={{ fontSize: 10 }} />
                   <YAxis tick={{ fontSize: 10 }} />
-                  <Tooltip formatter={(val) => [`${val} ha`]} />
-                  <Line type="monotone" dataKey="mineHa" name="Mine/Bare" stroke="#E74C3C" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="settlementHa" name="Settlement" stroke="#F39C12" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="waterHa" name="Water" stroke="#2980B9" strokeWidth={2} dot={{ r: 3 }} />
-                </LineChart>
+                  <Tooltip formatter={(val) => [`${val.toFixed(1)} ha`, "Area"]} />
+                  <Bar dataKey="area_ha" radius={[4, 4, 0, 0]} />
+                </BarChart>
               </ResponsiveContainer>
             </div>
           </div>

@@ -1,20 +1,67 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import KpiCard from "../components/KpiCard";
 import InteractiveMap from "../components/InteractiveMap";
-import { Pickaxe, Trees, Droplets, Home, Layers, Calendar } from "lucide-react";
-import { 
-  GENUINE_RF_METRICS, 
-  BUFFER_EXPOSURE_STATS, 
-  SATELLITE_SPECIFICATIONS 
-} from "../data/placeholderData";
+import { Pickaxe, Trees, Droplets, Home, Layers, Calendar, Loader2, AlertCircle } from "lucide-react";
+import { SATELLITE_SPECIFICATIONS } from "../data/placeholderData";
 import { 
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, 
-  CartesianGrid, Legend, AreaChart, Area 
+  CartesianGrid, Legend 
 } from "recharts";
+import api from "../services/api";
 
 export default function OverviewPage({ selectedYear, setSelectedYear }) {
-  const currentStats = GENUINE_RF_METRICS.find((d) => d.year === selectedYear) || GENUINE_RF_METRICS[GENUINE_RF_METRICS.length - 1];
-  const currentBuffer = BUFFER_EXPOSURE_STATS.find((d) => d.year === selectedYear) || BUFFER_EXPOSURE_STATS[BUFFER_EXPOSURE_STATS.length - 1];
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    setLoading(true);
+    setError(null);
+
+    api.getOverview(selectedYear)
+      .then((res) => {
+        if (isMounted) {
+          setData(res);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          console.error("Overview API error:", err);
+          setError(err.message);
+          setLoading(false);
+        }
+      });
+
+    return () => { isMounted = false; };
+  }, [selectedYear]);
+
+  // Derived metrics from backend API
+  const totalAoiHa = data?.total_aoi_area_ha || 7955.83;
+  const mineHa = data?.class_areas?.mine_ha ?? 0;
+  const forestHa = data?.class_areas?.forest_ha ?? 0;
+  const settlementHa = data?.class_areas?.settlement_ha ?? 0;
+  const waterHa = data?.class_areas?.water_ha ?? 0;
+  const componentCount = data?.component_count ?? 0;
+
+  const waterDistMedian = data?.proximity_distances?.water?.median_m ?? 0;
+  const waterDistMean = data?.proximity_distances?.water?.mean_m ?? 0;
+
+  // 250m Buffer exposure for settlement
+  const b250 = data?.buffer_exposure?.find((b) => b.buffer_radius_m === 250);
+  const settlementExposedHa = b250?.settlement?.exposed_ha ?? 0;
+  const settlementExposurePct = b250?.settlement?.exposure_pct ?? 0;
+
+  const chartData = [
+    {
+      year: selectedYear,
+      forestHa,
+      settlementHa,
+      mineHa,
+      waterHa
+    }
+  ];
 
   return (
     <div className="space-y-6">
@@ -22,15 +69,16 @@ export default function OverviewPage({ selectedYear, setSelectedYear }) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-slate-200">
         <div>
           <h2 className="text-xl font-bold text-slate-900 tracking-tight">Executive GIS Overview</h2>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Zawar Mining Belt &bull; Integrated Random Forest Classification &amp; Environmental Proximity (2021–2026)
+          <p className="text-xs text-slate-500 mt-0.5 flex items-center gap-2">
+            <span>Zawar Mining Belt &bull; Integrated Random Forest Classification &amp; Environmental Proximity (2021–2026)</span>
+            {loading && <Loader2 className="w-3.5 h-3.5 animate-spin text-teal-600 inline" />}
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="flex items-center bg-white border border-slate-200 rounded-lg p-1 shadow-2xs">
             <span className="text-xs text-slate-500 px-2.5 font-medium flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5 text-slate-400" /> Epoch:
+              <Calendar className="w-3.5 h-3.5 text-slate-400" /> Year:
             </span>
             <div className="flex gap-1">
               {[2021, 2022, 2023, 2024, 2025, 2026].map((yr) => (
@@ -51,23 +99,30 @@ export default function OverviewPage({ selectedYear, setSelectedYear }) {
         </div>
       </div>
 
-      {/* KPI Cards Row (Fully dynamic with selectedYear) */}
+      {error && (
+        <div className="p-3 bg-rose-50 border border-rose-200 rounded-lg flex items-center gap-2 text-rose-700 text-xs">
+          <AlertCircle className="w-4 h-4 shrink-0" />
+          <span>Failed to connect to backend: {error}</span>
+        </div>
+      )}
+
+      {/* KPI Cards Row (Driven by GET /api/overview) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <KpiCard
           title="Mine/Bare Footprint"
-          value={currentStats.mineHa.toFixed(2)}
+          value={mineHa.toFixed(2)}
           unit="ha"
-          subtitle={`${((currentStats.mineHa / currentStats.totalAreaHa) * 100).toFixed(1)}% of total study AOI`}
-          trend={`${currentStats.componentCount} connected components`}
+          subtitle={`${((mineHa / totalAoiHa) * 100).toFixed(1)}% of total study AOI`}
+          trend={`${componentCount} connected components`}
           trendType="neutral"
           icon={Pickaxe}
           badgeColor="bg-rose-50 text-rose-600"
         />
         <KpiCard
           title="Forest / Green Cover"
-          value={currentStats.forestHa.toFixed(2)}
+          value={forestHa.toFixed(2)}
           unit="ha"
-          subtitle={`${((currentStats.forestHa / currentStats.totalAreaHa) * 100).toFixed(1)}% landscape canopy`}
+          subtitle={`${((forestHa / totalAoiHa) * 100).toFixed(1)}% landscape canopy`}
           trend={selectedYear === 2023 ? "5573.9 ha (peak clearance)" : "Dominant regional matrix"}
           trendType={selectedYear === 2023 ? "down" : "neutral"}
           icon={Trees}
@@ -75,19 +130,19 @@ export default function OverviewPage({ selectedYear, setSelectedYear }) {
         />
         <KpiCard
           title="Distance to Water"
-          value={currentStats.waterDistMedian.toFixed(1)}
+          value={waterDistMedian.toFixed(1)}
           unit="m"
           subtitle="Median boundary setback"
-          trend={`${currentStats.waterDistMean.toFixed(0)}m annual mean`}
+          trend={`${waterDistMean.toFixed(0)}m annual mean`}
           trendType="neutral"
           icon={Droplets}
           badgeColor="bg-sky-50 text-sky-600"
         />
         <KpiCard
           title="250m Buffer Exposure"
-          value={currentBuffer.b250.settlementHa.toFixed(1)}
+          value={settlementExposedHa.toFixed(1)}
           unit="ha"
-          subtitle={`${currentBuffer.b250.settlementPct.toFixed(1)}% settlement within 250m`}
+          subtitle={`${settlementExposurePct.toFixed(1)}% settlement within 250m`}
           trend="Spatial buffer intersection"
           trendType="neutral"
           icon={Home}
@@ -104,49 +159,23 @@ export default function OverviewPage({ selectedYear, setSelectedYear }) {
             activeYear={selectedYear} 
             showBufferControls={true} 
             showAoiBoundary={true}
+            bufferLayerData={data?.buffer_geojson}
           />
         </div>
 
         {/* Right Summary Column */}
         <div className="space-y-4">
-          {/* Quick Specifications */}
-          <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs">
-            <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-3 flex items-center gap-1.5">
-              <Layers className="w-4 h-4 text-teal-600" /> Sensor &amp; Analysis Baseline
-            </h3>
-            <div className="space-y-2 text-xs text-slate-600">
-              <div className="flex justify-between pb-1.5 border-b border-slate-100">
-                <span className="text-slate-500">Sensor:</span>
-                <span className="font-medium text-slate-900">{SATELLITE_SPECIFICATIONS.sensor}</span>
-              </div>
-              <div className="flex justify-between pb-1.5 border-b border-slate-100">
-                <span className="text-slate-500">Spatial Grid:</span>
-                <span className="font-medium text-slate-900">{SATELLITE_SPECIFICATIONS.resolution}</span>
-              </div>
-              <div className="flex justify-between pb-1.5 border-b border-slate-100">
-                <span className="text-slate-500">Projected CRS:</span>
-                <span className="font-mono text-slate-900 text-[11px]">{SATELLITE_SPECIFICATIONS.crsProjected}</span>
-              </div>
-              <div className="flex justify-between pb-1.5 border-b border-slate-100">
-                <span className="text-slate-500">Classification Model:</span>
-                <span className="font-medium text-slate-900">Random Forest (Ojha et al.)</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-slate-500">Validation Accuracy:</span>
-                <span className="font-semibold text-emerald-600">{SATELLITE_SPECIFICATIONS.rfValidationAccuracy}</span>
-              </div>
-            </div>
-          </div>
+
 
           {/* Land Cover Proportion Chart */}
           <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs">
             <h3 className="text-xs font-semibold text-slate-800 uppercase tracking-wide mb-2">
               Land Cover Composition ({selectedYear})
             </h3>
-            <p className="text-[11px] text-slate-500 mb-3">Area in hectares (Total AOI: 7,955.8 ha)</p>
+            <p className="text-[11px] text-slate-500 mb-3">Area in hectares (Total AOI: {totalAoiHa.toLocaleString()} ha)</p>
             <div className="h-44 w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={[currentStats]} layout="vertical" margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+                <BarChart data={chartData} layout="vertical" margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#E2E8F0" />
                   <XAxis type="number" tick={{ fontSize: 10 }} />
                   <YAxis type="category" dataKey="year" hide />
@@ -158,40 +187,21 @@ export default function OverviewPage({ selectedYear, setSelectedYear }) {
                 </BarChart>
               </ResponsiveContainer>
             </div>
+            <div className="grid grid-cols-2 gap-2 mt-3 text-[11px] text-slate-600 pt-3 border-t border-slate-100">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#27AE60]"></span> Forest: {forestHa.toFixed(1)} ha
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#F39C12]"></span> Settlement: {settlementHa.toFixed(1)} ha
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#E74C3C]"></span> Mine/Bare: {mineHa.toFixed(1)} ha
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#2980B9]"></span> Water: {waterHa.toFixed(1)} ha
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Multi-Year Temporal Area Dynamics */}
-      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-900">6-Year Multi-Temporal Surface Land-Cover Dynamics</h3>
-            <p className="text-xs text-slate-500">2021–2026 Surface Area Tracking (Hectares) from Verified Multi-Class Vector Outputs</p>
-          </div>
-        </div>
-        <div className="h-64 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={GENUINE_RF_METRICS} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-              <defs>
-                <linearGradient id="colorMine" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#E74C3C" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#E74C3C" stopOpacity={0.0} />
-                </linearGradient>
-                <linearGradient id="colorForest" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#27AE60" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#27AE60" stopOpacity={0.0} />
-                </linearGradient>
-              </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" />
-              <XAxis dataKey="year" tick={{ fontSize: 11 }} />
-              <YAxis tick={{ fontSize: 11 }} />
-              <Tooltip formatter={(val) => [`${val} ha`]} />
-              <Legend wrapperStyle={{ fontSize: "12px", paddingTop: "8px" }} />
-              <Area type="monotone" dataKey="mineHa" name="Mine/Bare Area (ha)" stroke="#E74C3C" fillOpacity={1} fill="url(#colorMine)" strokeWidth={2} />
-              <Area type="monotone" dataKey="forestHa" name="Forest/Vegetation (ha)" stroke="#27AE60" fillOpacity={1} fill="url(#colorForest)" strokeWidth={2} />
-            </AreaChart>
-          </ResponsiveContainer>
         </div>
       </div>
     </div>
